@@ -7,7 +7,7 @@
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        Long description of module's purpose
+        Modulo encargado de la contabilidad del negocio.
     """,
 
     'author': "My Company",
