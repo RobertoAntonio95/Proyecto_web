@@ -1,5 +1,7 @@
+from odoo import models, fields, api
 
-class poliza(models.Model):
+
+class vendedor(models.Model):
 
     _name = 'contabilidad.vendedor'
     _description = 'vendedor'

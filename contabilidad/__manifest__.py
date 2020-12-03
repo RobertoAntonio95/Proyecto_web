@@ -34,6 +34,7 @@
         'views/views.xml',
         'views/templates.xml',
         'views/menu.xml',
+        'views/views_vendedor.xml',
 
     ],
     # only loaded in demonstration mode
