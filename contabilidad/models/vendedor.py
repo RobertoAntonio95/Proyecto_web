@@ -4,7 +4,7 @@ from odoo import models, fields, api
 class vendedor(models.Model):
 
     _name = 'contabilidad.vendedor'
-    _description = 'vendedor'
+    _description = 'vendedores'
 
     nombre = fields.Char(string="nombre", required=True)
     rut = fields.Char(string="rut", required=True)
