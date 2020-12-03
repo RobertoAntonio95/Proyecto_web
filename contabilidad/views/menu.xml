@@ -1,6 +1,0 @@
-<odoo>
-
-    <!-- App Menu -->
-    <menuitem id="menu_contabilidad" name="Contabilidad" />
-
-</odoo>
