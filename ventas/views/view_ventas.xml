@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+
+        <!-- Creo Mi listado -->
+        <record model="ir.ui.view" id="ventas.ventas.list">
+            <field name="name">ventas list</field>
+            <field name="model">ventas.principal</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="valor"/>
+                    <field name="cantidad"/>
+                </tree>
+        </field>
+        </record>
+           <!-- Creo la accion que va a ejecutar el menu -->
+
+        <record model="ir.actions.act_window" id="ventas.principal.action_window">
+            <field name="name">Pagina Principal</field>
+            <field name="res_model">ventas.principal</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+           <!-- Creo la accion del servidor -->
+        <record model="ir.actions.server" id="ventas.principal.action_server">
+            <field name="name">Ventas Server</field>
+            <field name="model_id" ref="model_ventas_principal"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                "type": "ir.actions.act_window",
+                "view_mode": "tree,form",
+                "res_model": self._name,
+                }
+        </field>
+    </record>
+
+           <!-- Creo la raiz (una sola vez) -->
+       <menuitem name="Ventas" id="ventas.menu_root"/>
+
+         <!-- Creo el menu principal  -->
+       <menuitem name="Principal" id="ventas.menu_principal" parent="ventas.menu_root"
+              action="ventas.principal_action_window"/>
+
+    </data>
+</odoo>
