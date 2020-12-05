@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "ventas",
+    'name': "Ventas",
 
     'summary': """
         Este módulo estará encargado de las ventas del sistema, el cual presentara al cliente
@@ -10,11 +10,11 @@
         en stock, se mostrarán variantes del producto.""",
 
     'description': """
-        Modulo encargado de las ventas a clientes mayoristas del negocio
+       Ejemplo de desarrollo de modulo de ventas en odoo
     """,
 
-    'author': "Tomás Navarro Mancilla",
-    'website': "http://www.Utalca.cl",
+    'author': "Tomas Navarro",
+    'website': "www.utalca.cl",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/12.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -28,11 +28,9 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/view_ventas.xml',
+        # 'views/templates.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'application': True
+
 }
