@@ -10,7 +10,7 @@
                     <field name="rut"/>
                     <field name="correo"/>
                     <field name="telefono"/>
-                    <field name="cargo"/>
+                    <field name="cargo_id"/>
                 </tree>
             </field>
         </record>
@@ -42,8 +42,8 @@
         <!-- Menú raiz contabilidad -->
         <menuitem name="contabilidad" id="contabilidad.menu_root"/>
 
-        <!-- menú item de contabilidad -->
-        <menuitem name="contabilidad" id="seguros.menu_poliza" parent="contabilidad.menu_root" action="contabilidad.vendedor_action_window"/>
+        <!-- menú item de vendedor -->
+        <menuitem name="vendedor" id="contabilidad.menu_vendedor" parent="contabilidad.menu_root" action="contabilidad.vendedor_action_window"/>
 
     </data>
 </odoo>
