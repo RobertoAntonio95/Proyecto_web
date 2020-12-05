@@ -1,0 +1,79 @@
+[1mdiff --cc ventas/__manifest__.py[m
+[1mindex 6a08584,20710b6..0000000[m
+mode 100644,100644..100755[m
+[1m--- a/ventas/__manifest__.py[m
+[1m+++ b/ventas/__manifest__.py[m
+[36m@@@ -1,17 -1,20 +1,28 @@@[m
+  # -*- coding: utf-8 -*-[m
+  {[m
+[31m -    'name': "ventas",[m
+[32m +    'name': "Ventas",[m
+  [m
+      'summary': """[m
+[31m-         Short (1 phrase/line) summary of the module's purpose, used as[m
+[31m-         subtitle on modules listing or apps.openerp.com""",[m
+[32m+         Este módulo estará encargado de las ventas del sistema, el cual presentara al cliente[m
+[32m+         interno o responsable los productos a vender con una imagen respectiva y actualizada[m
+[32m+         de dicho producto, estos tendrán una categoría en específico la cual permitirá al[m
+[32m+         usuario un acceso más expedito y ágil, por ultimo si el producto del cliente no esta[m
+[32m+         en stock, se mostrarán variantes del producto.""",[m
+  [m
+      'description': """[m
+[32m++<<<<<<< HEAD[m
+[32m +       Ejemplo de desarrollo de modulo de ventas en odoo[m
+[32m +    """,[m
+[32m +[m
+[32m +    'author': "Tomas Navarro",[m
+[32m +    'website': "www.utalca.cl",[m
+[32m++=======[m
+[32m+         Modulo encargado de las ventas a clientes mayoristas del negocio[m
+[32m+     """,[m
+[32m+ [m
+[32m+     'author': "Tomás Navarro Mancilla",[m
+[32m+     'website': "http://www.Utalca.cl",[m
+[32m++>>>>>>> origin[m
+  [m
+      # Categories can be used to filter modules in modules listing[m
+      # Check https://github.com/odoo/odoo/blob/12.0/odoo/addons/base/data/ir_module_category_data.xml[m
+[36m@@@ -24,9 -27,12 +35,13 @@@[m
+  [m
+      # always loaded[m
+      'data': [[m
+[31m -        # 'security/ir.model.access.csv',[m
+[31m -        'views/views.xml',[m
+[31m -        'views/templates.xml',[m
+[31m -    ],[m
+[31m -    # only loaded in demonstration mode[m
+[31m -    'demo': [[m
+[31m -        'demo/demo.xml',[m
+[32m +       # 'security/ir.model.access.csv',[m
+[32m +        'views/view_ventas.xml',[m
+[32m +       # 'views/templates.xml',[m
+      ],[m
+[32m++<<<<<<< HEAD[m
+[32m +   [m
+[31m- }[m
+[32m++}[m
+[32m++=======[m
+[32m+ }[m
+[32m++>>>>>>> origin[m
+[1mdiff --git a/contabilidad/__manifest__.py b/contabilidad/__manifest__.py[m
+[1mindex c046d5b..d517a8d 100644[m
+[1m--- a/contabilidad/__manifest__.py[m
+[1m+++ b/contabilidad/__manifest__.py[m
+[36m@@ -3,8 +3,13 @@[m
+     'name': "contabilidad",[m
+ [m
+     'summary': """[m
+[31m-      Borre lo que habia aqui, me tiraba un error xd[m
+[31m-      .""",[m
+[32m+[m[32m        El modulo de contabilidad esta diseñado exclusivamente para la simplicación de[m
+[32m+[m[32m        procesos financieros tales como balances y la facturación del negocio. La automatización[m
+[32m+[m[32m        de este modulo permitirá una facturación rápida y ágil creando cierres[m
+[32m+[m[32m        contables en plazos determinados de tiempo. Por último, este módulo permite de[m
+[32m+[m[32m        forma rápida y sencilla enviar las facturas correspondiente a los clientes vía correo[m
+[32m+[m[32m        electrónico al momento de que estos paguen, además de almacenarlas en la base de[m
+[32m+[m[32m        datos para futuros análisis.""",[m
+ [m
+     'description': """[m
+         Modulo encargado de la contabilidad del negocio.[m

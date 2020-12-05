@@ -3,8 +3,13 @@
     'name': "contabilidad",
 
     'summary': """
-      Borre lo que habia aqui, me tiraba un error xd
-      .""",
+        El modulo de contabilidad esta diseñado exclusivamente para la simplicación de
+        procesos financieros tales como balances y la facturación del negocio. La automatización
+        de este modulo permitirá una facturación rápida y ágil creando cierres
+        contables en plazos determinados de tiempo. Por último, este módulo permite de
+        forma rápida y sencilla enviar las facturas correspondiente a los clientes vía correo
+        electrónico al momento de que estos paguen, además de almacenarlas en la base de
+        datos para futuros análisis.""",
 
     'description': """
         Modulo encargado de la contabilidad del negocio.
@@ -24,12 +29,17 @@
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
+
+        # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/menu.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': True,
+    'application': True
 }
