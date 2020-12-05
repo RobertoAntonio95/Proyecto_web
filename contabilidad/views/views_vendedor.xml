@@ -1,5 +1,6 @@
 <odoo>
     <data>
+
         <!-- explicit list view definition -->
         <record model="ir.ui.view" id="contabilidad.vendedor_list">
             <field name="name">Lista de vendedores</field>

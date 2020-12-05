@@ -4,6 +4,8 @@ from odoo import models, fields, api
 class Cargo(models.Model):
 
     _name = 'contabilidad.cargo'
+    _description = 'tipo de trabajador'
+    _rec_name = 'nombre'
 
     nombre = fields.Char(string="nombre", required=True)
 
