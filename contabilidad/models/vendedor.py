@@ -14,6 +14,7 @@ class Vendedor(models.Model):
 
     _name = 'contabilidad.vendedor'
     _description = 'vendedores'
+    _rec_name = 'nombre'
 
     nombre = fields.Char(string="nombre", required=True)
     rut = fields.Char(string="rut", required=True)
