@@ -1,5 +1,7 @@
 <odoo>
     <data>
+        <!-- PRUEBA -->
+
         <!-- Creo Mi listado -->
         <record model="ir.ui.view" id="ventas.ventas_list">
             <field name="name">ventas list</field>
@@ -31,6 +33,7 @@
                 "res_model": self._name,
                 }
         </field>
+         
     </record>
 
            <!-- Creo la raiz (una sola vez) -->
