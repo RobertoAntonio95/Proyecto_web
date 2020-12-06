@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import vendedor, factura
+from . import vendedor, factura, banco

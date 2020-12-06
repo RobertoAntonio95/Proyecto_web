@@ -27,13 +27,14 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
-
+    #
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/views_cargo.xml',
         'views/views_vendedor.xml',
         'views/views_facturas.xml',
+        'views/views_banco.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
