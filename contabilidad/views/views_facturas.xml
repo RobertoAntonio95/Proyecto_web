@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="contabilidad.factura_list">
+            <field name="name">Lista de facturas</field>
+            <field name="model">contabilidad.factura</field>
+            <field name="arch" type="xml">
+                <tree>
+
+                    <field name="cliente"/>
+                    <field name="vendedor_id"/>
+                    <field name="fecha_creación"/>
+                    <field name="fecha_vencimiento"/>
+                    <field name="base_imponible"/>
+                    <field name="impuestos"/>
+                    <field name="total"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- actions opening views on models
+        que va a pasar cuando ejecute el menú -->
+        <record model="ir.actions.act_window" id="contabilidad.factura_action_window">
+            <field name="name">Listado de facturas</field>
+            <field name="res_model">contabilidad.factura</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- server action to the one above -->
+        <record model="ir.actions.server" id="contabilidad.factura_action_server">
+            <field name="name">factura server</field>
+            <field name="model_id" ref="model_contabilidad_factura"/>
+            <field name="state">code</field>
+            <field name="code">
+
+                <!-- accion del servidor -->
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+            </field>
+        </record>
+
+        <!-- Menú raiz contabilidad -->
+        <menuitem name="contabilidad" id="contabilidad.menu_root"/>
+
+        <!-- menú item de factura -->
+        <menuitem name="factura" id="contabilidad.menu_factura" parent="contabilidad.menu_root" action="contabilidad.factura_action_window"/>
+
+    </data>
+</odoo>
