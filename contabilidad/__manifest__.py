@@ -31,9 +31,9 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/views_cargo.xml',
         'views/views_vendedor.xml',
         'views/views_facturas.xml',
-
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -31,4 +31,5 @@
         'views/view_ventas.xml',
         # 'views/templates.xml',
     ],
+    'application': True
 }

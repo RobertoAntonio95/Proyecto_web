@@ -1,6 +1,5 @@
 from odoo import models, fields, api
 
-
 class Cargo(models.Model):
 
     _name = 'contabilidad.cargo'
@@ -8,7 +7,6 @@ class Cargo(models.Model):
     _rec_name = 'nombre'
 
     nombre = fields.Char(string="nombre", required=True)
-
 
 class Vendedor(models.Model):
 
@@ -23,3 +21,6 @@ class Vendedor(models.Model):
 
     cargo_id = fields.Many2one(
         'contabilidad.cargo', string='cargo en la empresa')
+
+
+
