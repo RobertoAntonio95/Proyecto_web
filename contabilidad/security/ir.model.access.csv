@@ -2,5 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 access_vendedor_contabilidad,contabilidad.vendedor,model_contabilidad_vendedor,,1,1,1,1
 access_cargo_contabilidad,contabilidad.cargo,model_contabilidad_cargo,,1,1,1,1
-
 access_factura_contabilidad,contabilidad.factura,model_contabilidad_factura,,1,1,1,1
+access_banco_contabilidad,contabilidad.banco,model_contabilidad_banco,,1,1,1,1

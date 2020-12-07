@@ -2,6 +2,7 @@
     <data>
         <!-- PRUEBA -->
 
+
         <!-- Creo Mi listado -->
         <record model="ir.ui.view" id="ventas.ventas_list">
             <field name="name">ventas list</field>
@@ -12,12 +13,12 @@
                     <field name="valor"/>
                     <field name="cantidad"/>
                 </tree>
-        </field>
+            </field>
         </record>
            <!-- Creo la accion que va a ejecutar el menu -->
 
         <record model="ir.actions.act_window" id="ventas.principal_action_window">
-            <field name="name">Pagina Principal</field>
+            <field name="name">Compras y Facturas </field>
             <field name="res_model">ventas.principal</field>
             <field name="view_mode">tree,form</field>
         </record>
@@ -38,10 +39,15 @@
 
            <!-- Creo la raiz (una sola vez) -->
        <menuitem name="Ventas" id="ventas.menu_root"/>
+       <menuitem name="Facturas" id="ventas.factura_menu_root"/>
 
          <!-- Creo el menu principal  -->
        <menuitem name="Principal" id="ventas.menu_principal" parent="ventas.menu_root"
               action="ventas.principal_action_window"/>
+
+        <menuitem name="Compras y Facturas" id="ventas.facturas" parent="ventas.menu_root"
+              action="ventas.principal_action_window"/>
+
 
     </data>
 </odoo>

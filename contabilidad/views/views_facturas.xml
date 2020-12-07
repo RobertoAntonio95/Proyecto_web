@@ -8,8 +8,8 @@
             <field name="arch" type="xml">
                 <tree>
 
-                    <field name="cliente"/>
                     <field name="vendedor_id"/>
+                    <field name="banco_id"/>
                     <field name="fecha_creación"/>
                     <field name="fecha_vencimiento"/>
                     <field name="base_imponible"/>
