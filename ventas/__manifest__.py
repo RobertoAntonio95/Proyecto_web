@@ -29,7 +29,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/view_ventas.xml',
-        # 'views/templates.xml',
+        'views/view_cliente.xml',
+        'views/view_ordencompra.xml',
     ],
     'application': True
 }

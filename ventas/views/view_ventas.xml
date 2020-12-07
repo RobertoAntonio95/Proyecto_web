@@ -39,15 +39,8 @@
 
            <!-- Creo la raiz (una sola vez) -->
        <menuitem name="Ventas" id="ventas.menu_root"/>
-       <menuitem name="Facturas" id="ventas.factura_menu_root"/>
-
-         <!-- Creo el menu principal  -->
+        <!-- Creo el menu principal  -->
        <menuitem name="Principal" id="ventas.menu_principal" parent="ventas.menu_root"
               action="ventas.principal_action_window"/>
-
-        <menuitem name="Compras y Facturas" id="ventas.facturas" parent="ventas.menu_root"
-              action="ventas.principal_action_window"/>
-
-
     </data>
 </odoo>
