@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="contabilidad.detalle_list">
+            <field name="name">Lista de detalles</field>
+            <field name="model">contabilidad.detalle</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="producto"/>
+                    <field name="cantidad"/>
+                    <field name="precio"/>
+                    <field name="total"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- actions opening views on models
+        que va a pasar cuando ejecute el menú -->
+        <record model="ir.actions.act_window" id="contabilidad.detalle_action_window">
+            <field name="name">Listado de detalles</field>
+            <field name="res_model">contabilidad.detalle</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- server action to the one above -->
+        <record model="ir.actions.server" id="contabilidad.detalle_action_server">
+            <field name="name">detalle server</field>
+            <field name="model_id" ref="model_contabilidad_detalle"/>
+            <field name="state">code</field>
+            <field name="code">
+
+                <!-- accion del servidor -->
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+            </field>
+        </record>
+
+        <!-- Menú raiz contabilidad -->
+        <menuitem name="contabilidad" id="contabilidad.menu_root"/>
+
+        <!-- menú item de detalle -->
+        <menuitem name="detalle" id="contabilidad.menu_detalle" parent="contabilidad.menu_root" action="contabilidad.detalle_action_window"/>
+
+    </data>
+</odoo>
