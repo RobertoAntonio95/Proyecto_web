@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <!-- Creo Mi listado -->
+        <record model="ir.ui.view" id="ventas.ordencompra_list">
+            <field name="name">Orden Compra list</field>
+            <field name="model">ventas.ordencompra</field>
+            <field name="arch" type="xml">
+                <tree>
+
+                    <field name="fecha"/>
+                    <field name="fecha_limite"/>
+                    <field name="total"/>
+                    <field name="impuesto"/>
+                    <field name="validez"/>
+                    <field name="id_detalle_orden_compra"/>
+                    
+                </tree>
+            </field>
+        </record>
+
+           
+        <!-- Creo la accion que va a ejecutar el menu -->
+        <record model="ir.actions.act_window" id="ventas.ordencompra_action_window">
+            <field name="name">Orden Compra</field>
+            <field name="res_model">ventas.ordencompra</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Creo la accion del servidor -->
+        <record model="ir.actions.server" id="ventas.cliente_action_server">
+            <field name="name">orden compra server</field>
+            <field name="model_id" ref="model_ventas_ordencompra"/>
+            <field name="state">code</field>
+            <field name="code">
+
+                action = {
+                    "type": "ir.actions.act_window",
+                    "view_mode": "tree,form",
+                    "res_model": self._name,
+                }
+
+             </field>
+        </record>
+
+        <!-- Creo la raiz (una sola vez) -->
+        <menuitem name="Ventas" id="ventas.menu_root"/>
+
+        <!-- Creo el menu Cliente  -->
+        <menuitem name="Orden compra" id="ventas.menu_ordencompra" parent="ventas.menu_root"action="ventas.ordencompra_action_window"/>
+    </data>
+</odoo>
