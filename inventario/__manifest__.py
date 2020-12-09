@@ -34,6 +34,7 @@
         'views/views.xml',
         'views/templates.xml',
         'views/categoria.xml',
+        'views/proveedor.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
