@@ -4,6 +4,7 @@ class cliente(models.Model):
     
     _name = 'ventas.cliente'
     _description = 'Clientes de la empresa'
+    _rec_name = 'nombre'
 
     nombre = fields.Char(string="Nombre", required=True)
     rut = fields.Char(string="RUT", required=True)
