@@ -24,25 +24,15 @@
             <field name="res_model">ventas.cliente</field>
             <field name="view_mode">tree,form</field>
         </record>
-           <!-- Creo la accion del servidor -->
-        <record model="ir.actions.server" id="ventas.cliente_action_server">
-            <field name="name">ventas server</field>
-            <field name="model_id" ref="model_ventas_cliente"/>
-            <field name="state">code</field>
-            <field name="code">
-                action = {
-                "type": "ir.actions.act_window",
-                "view_mode": "tree,form",
-                "res_model": self._name,
-                }
-        </field>
-         
-    </record>
+        
+        <!-- Creo la accion del servidor -->
+       
 
            <!-- Creo la raiz (una sola vez) -->
        <menuitem name="Ventas" id="ventas.menu_root"/>
         <!-- Creo el menu cliente  -->
-       <menuitem name="cliente" id="ventas.menu_cliente" parent="ventas.menu_root"
+       <menuitem name="Lista de Clientes" id="ventas.menu_cliente" parent="ventas.menu_root"
               action="ventas.cliente_action_window"/>
+              
     </data>
 </odoo>
