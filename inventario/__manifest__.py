@@ -36,6 +36,7 @@
         'views/categoria.xml',
         'views/proveedor.xml',
         'views/producto.xml',
+        'views/presupuesto',
     ],
     # only loaded in demonstration mode
     'demo': [

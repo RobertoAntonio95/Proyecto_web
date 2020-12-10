@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+
+        <!-- LISTA PRODS -->
+        <record model="ir.ui.view" id="inventario.producto_list">
+            <field name="name">Lista de productos</field>
+            <field name="model">inventario.producto</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="vendedor"/>
+                    <field name="cliente"/>
+                    <field name="detalle presupuesto"/>
+                    <field name="fecha"/>
+                    <field name="fecha limite"/>
+                    <field name="total"/>
+                    <field name="estado solicitud"/>
+                    <field name="impuesto"/>
+                    <field name="total"/>
+                    <field name="correo"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- ACCION CLICK QUE MUESTRA MENU -->
+        <record model="ir.actions.act_window" id="inventario.presupuesto_action_window">
+            <field name="name">Listado de presupuestos</field>
+            <field name="res_model">inventario.presupuesto</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- ACCION SERVER -->
+        <record model="ir.actions.server" id="inventario.producto_action_server">
+            <field name="name">presupuesto server</field>
+            <field name="model_id" ref="model_inventario_presupuesto"/>
+            <field name="state">code</field>
+            <field name="code">
+
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+            </field>
+        </record>
+
+        <!-- RAIZ INVENTARIO -->
+        <menuitem name="inventario" id="inventario.menu_root"/>
+
+        <!-- MENU PRESUPUESTO -->
+        <menuitem name="presupuesto" id="inventario.menu_presupuesto" parent="inventario.menu_root" action="inventario.presupuesto_action_window"/>
+
+    </data>
+</odoo>
