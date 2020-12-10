@@ -1,3 +1,3 @@
-# -*- coding: utf-8 -*-
+# Momentaneamente probando con el modelo de categoria y proveedor
 
-from . import models
+from . import categoria, proveedor
