@@ -10,7 +10,7 @@ class Producto(models.Model):
     descripcion = fields.Char(string="descripcion", required=True)
     stock = fields.Integer(string="stock")
     stock_critico = fields.Integer(string="stock_critico")
-    impuesto = fields.float(string="impuesto")    # PENSANDO QUE NO FUERA UN VALOR ENTERO
+    impuesto = fields.Integer(string="impuesto")    # PENSANDO QUE NO FUERA UN VALOR ENTERO
     precio_unitario = fields.Integer(string="precio_unitario")
     preciofinal = fields.Integer(string="preciofinal")
 
