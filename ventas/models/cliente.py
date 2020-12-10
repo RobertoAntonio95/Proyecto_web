@@ -4,6 +4,7 @@ class cliente(models.Model):
     
     _name = 'ventas.cliente'
     _description = 'Clientes de la empresa'
+    _rec_name = 'nombre'
 
     nombre = fields.Char(string="Nombre", required=True)
     rut = fields.Char(string="RUT", required=True)
@@ -11,5 +12,5 @@ class cliente(models.Model):
     empresa = fields.Char(string="Empresas", required=True)
     telefono = fields.Char(string="Telefono", required=True)    
 
-   # cliente_id = fields.Many2one(
-    #    'ventas.cliente', string='Codigo del cliente')
+    cliente_id = fields.Many2one(
+          'ventas.ordencompra', string='Codigo del cliente')
