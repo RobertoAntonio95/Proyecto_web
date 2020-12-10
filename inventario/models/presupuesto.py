@@ -20,9 +20,9 @@ class inventario(models.Model):
     )
 
     fecha = fields.Char(string="fecha", required=True)
-    fecha_limite = fields.Char(string="fecha_limite", required=True)
+    fecha_limite = fields.Date(string="fecha_limite", required=True)
     total = fields.Integer(string="total", required=True)
-    estado_solicitud = fields.Boolean(Boolean="estado_solicitud", required=True) #DUDA MAYUSCULA
+    estado_solicitud = fields.Boolean(string="estado_solicitud", required=True) #DUDA MAYUSCULA
     impuesto = fields.float(string="impuesto", required=True)    # PENSANDO QUE NO FUERA UN VALOR ENTERO
     total = fields.Integer(string="total", required=True)
     correo = fields.Char(string="correo", required=True)
