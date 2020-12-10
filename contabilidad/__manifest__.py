@@ -26,7 +26,7 @@
     'version': '1,1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'ventas'],
+    'depends': ['base', 'ventas', 'inventario'],
     #
     # always loaded
     'data': [

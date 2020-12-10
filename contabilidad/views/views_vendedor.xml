@@ -12,6 +12,7 @@
                     <field name="correo"/>
                     <field name="telefono"/>
                     <field name="cargo_id"/>
+                    <field name="cont_facturas"/>
                 </tree>
             </field>
         </record>
