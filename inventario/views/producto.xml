@@ -12,8 +12,8 @@
                     <field name="stock"/>
                     <field name="stock_critico"/>
                     <field name="impuesto"/>
-                    <field name="precio unitario"/>
-                    <field name="precio final"/>
+                    <field name="precio_unitario"/>
+                    <field name="precio_final"/>
                 </tree>
             </field>
         </record>
@@ -41,7 +41,7 @@
         </record>
 
         <!-- RAIZ INVENTARIO -->
-        <menuitem name="inventario" id="inventario.menu_root"/>
+        <menuitem name="Inventario" id="inventario.menu_root"/>
 
         <!-- MENU PRODUCTO -->
         <menuitem name="producto" id="inventario.menu_producto" parent="inventario.menu_root" action="inventario.producto_action_window"/>

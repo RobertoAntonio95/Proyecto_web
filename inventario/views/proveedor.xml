@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="nombre"/>
-                    <field name="marca representante"/>
+                    <field name="marca_representante"/>
                     <field name="telefono"/>
                     <field name="correo"/>
                     <field name="direccion"/>
@@ -18,7 +18,7 @@
 
         <!-- ACCION CLICK QUE MUESTRA MENU -->
         <record model="ir.actions.act_window" id="inventario.proveedor_action_window">
-            <field name="name">Listado de proveedors</field>
+            <field name="name">Listado de proveedores</field>
             <field name="res_model">inventario.proveedor</field>
             <field name="view_mode">tree,form</field>
         </record>
@@ -39,10 +39,10 @@
         </record>
 
         <!-- RAIZ INVENTARIO -->
-        <menuitem name="inventario" id="inventario.menu_root"/>
+        <menuitem name="Inventario" id="inventario.menu_root"/>
 
         <!-- MENU proveedor -->
-        <menuitem name="proveedor" id="inventario.menu_proveedor" parent="inventario.menu_root" action="inventario.proveedor_action_window"/>
+        <menuitem name="Lista de Proveedores" id="inventario.menu_proveedor" parent="inventario.menu_root" action="inventario.proveedor_action_window"/>
 
     </data>
 </odoo>

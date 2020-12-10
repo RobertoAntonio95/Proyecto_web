@@ -9,11 +9,11 @@
                 <tree>
                     <field name="vendedor"/>
                     <field name="cliente"/>
-                    <field name="detalle presupuesto"/>
+                    <field name="detalle_presupuesto"/>
                     <field name="fecha"/>
-                    <field name="fecha limite"/>
+                    <field name="fecha_limite"/>
                     <field name="total"/>
-                    <field name="estado solicitud"/>
+                    <field name="estado_solicitud"/>
                     <field name="impuesto"/>
                     <field name="total"/>
                     <field name="correo"/>
