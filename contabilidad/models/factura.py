@@ -31,29 +31,3 @@ class Factura(models.Model):
     @api.one
     def _total(self):
         self.total = (self.base_imponible + self.impuestos)
-
-
-# class Detalle():
-#
-#    _name = 'contabilidad.detalle'
-#    _description = 'detalle de las facturas'
-#
-#    cantidad = fields.Integer(default=1, string="cantidad")
-#    precio_unitario = fields.Integer(string="precio")
-#    sub_total = fields.Integer(string="sub total", compute="_sub_total")
-#    impuesto = fields.Integer(
-#        string="IVA", compute="_impuesto")
-#    total = fields.Integer(
-#        string="total", compute="_total")
-#
-#    @api.one
-#    def _sub_total(self):
-#        self.sub_total = (self.precio_unitario * self.precio_unitario)
-#
-#    @api.one
-#    def _impuesto(self):
-#        self.impuesto = (self.sub_total * 0.19)
-#
-#    @api.one
-#    def _total(self):
-#        self.total = (self.sub_total + self.impuesto)

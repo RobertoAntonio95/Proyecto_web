@@ -8,6 +8,8 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="nombre"/>
+                    <field name="cont_trabajadores"/>
+
                 </tree>
             </field>
         </record>
