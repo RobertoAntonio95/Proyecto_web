@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+
+        <!-- LISTA PRODS -->
+        <record model="ir.ui.view" id="inventario.producto_list">
+            <field name="name">Lista de productos</field>
+            <field name="model">inventario.producto</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="descripcion"/>
+                    <field name="stock"/>
+                    <field name="stock_critico"/>
+                    <field name="impuesto"/>
+                    <field name="precio unitario"/>
+                    <field name="precio final"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- ACCION CLICK QUE MUESTRA MENU -->
+        <record model="ir.actions.act_window" id="inventario.producto_action_window">
+            <field name="name">Listado de productos</field>
+            <field name="res_model">inventario.productos</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- ACCION SERVER -->
+        <record model="ir.actions.server" id="inventario.producto_action_server">
+            <field name="name">producto server</field>
+            <field name="model_id" ref="model_inventario_producto"/>
+            <field name="state">code</field>
+            <field name="code">
+
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+            </field>
+        </record>
+
+        <!-- RAIZ INVENTARIO -->
+        <menuitem name="inventario" id="inventario.menu_root"/>
+
+        <!-- MENU PRODUCTO -->
+        <menuitem name="producto" id="inventario.menu_producto" parent="inventario.menu_root" action="inventario.producto_action_window"/>
+
+    </data>
+</odoo>
