@@ -23,10 +23,10 @@
     # for the full list
 
     'category': 'Contabilidad',
-    'version': '0.1',
+    'version': '1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'ventas'],
     #
     # always loaded
     'data': [
@@ -35,6 +35,7 @@
         'views/views_vendedor.xml',
         'views/views_facturas.xml',
         'views/views_banco.xml',
+        'views/views_detalle.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

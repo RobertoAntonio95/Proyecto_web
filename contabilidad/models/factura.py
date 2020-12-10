@@ -16,9 +16,13 @@ class Factura(models.Model):
     fecha_creación = fields.Date("Fecha de creación de la factura")
     fecha_vencimiento = fields.Date("Fecha de vecimiento")
     # base imponible será la suma de todos los valores de los productos
-    base_imponible = fields.Integer(string="base_imponible")
+    base_imponible = fields.Integer(
+        string="base_imponible")
     impuestos = fields.Integer(string="impuestos", compute="_impuestos")
     total = fields.Integer(string="total", compute="_total")
+
+    detalle_factura_ids = fields.One2many(
+        'contabilidad.detalle', 'factura_id', string='detalles')
 
     @api.one
     def _impuestos(self):
@@ -27,10 +31,6 @@ class Factura(models.Model):
     @api.one
     def _total(self):
         self.total = (self.base_imponible + self.impuestos)
-
-
-# detalle_factura_ids = fields.One2many(
-#     'contabilidad.detalle_factura', 'factura_id', string='detalles')
 
 
 # class Detalle():
