@@ -35,10 +35,13 @@
         'views/views_facturas.xml',
         'views/views_banco.xml',
         'views/views_detalle.xml',
+        'reports/factura_report.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
-    'application': True
+    'application': True,
+    'instalable': True,
 }

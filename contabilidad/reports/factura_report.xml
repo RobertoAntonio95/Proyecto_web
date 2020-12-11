@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- id, nombre, modelo que se imprime, tipo de reporte, template -->
+    <report id="action_factura_report" string="facturas" model="contabilidad.factura" report_type="qweb-pdf" name="contabilidad.factura_report_template" />
+
+    <template id="factura_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="header">
+
+                    </div>
+                    <div class="page">
+
+                        <h1>FACHY Comercial S.A</h1>
+
+                        <p>
+                            <span t-field="o.vendedor_id"/>
+                        </p>
+
+                        <table class="table table-borderless table-sm">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">vendedor</th>
+                                    <th scope="col"></th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.vendedor_id" />
+                                    </td>
+                                    <td>
+                                        <t t-foreach="request.env['contabilidad.vendedor'].search([])" t-as="obj">
+                                            <t t-esc="obj.rut"/>
+                                        </t>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="footer">
+                        <small>
+                    Todos los derechos reservados, modulo por roberto, no se que más escribir.
+                        </small>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

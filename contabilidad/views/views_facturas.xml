@@ -24,10 +24,8 @@
             <field name="arch" type="xml">
                 <form string="Factura">
                     <header>
-                        <!-- To add buttons and status widget -->
                     </header>
                     <sheet>
-                        <!-- To add form content -->
                         <group>
                             <group>
                                 <field name="vendedor_id"/>
@@ -36,18 +34,21 @@
                                 <field name="fecha_vencimiento"/>
                             </group>
                             <group>
+                                <field name="currency_id"/>
                                 <field name="base_imponible"/>
                                 <field name="impuestos"/>
                                 <field name="total"/>
                             </group>
                         </group>
-
                         <group>
                             <field name="detalle_factura_ids"/>
                         </group>
+                        <notebook>
+                            <page string="apuntes">
+                                <field name="notas"/>
+                            </page>
+                        </notebook>
                     </sheet>
-
-
                 </form>
             </field>
         </record>
