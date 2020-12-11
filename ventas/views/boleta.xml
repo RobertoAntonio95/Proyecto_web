@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+   <report id="boleta"
+   string="Imprimir Factura"
+   model="ventas.ordencompra"
+   report_type="qweb-pdf"
+   name="ventas.report_ventas_template"
+   />
+
+   <template id="report_ventas_template">
+    <t t-call="web.html_container">
+
+      <t t-foreach="docs" t-as="o">
+         <div class="header"> 
+         </div>
+
+         <div class="page"> 
+                <h1>Boleta y/o Factura</h1> 
+                <h2>Fecha de emisión</h2>
+                <p><span t-field="o.fecha"/></p>
+                <h2>Datos de la empresa</h2>
+                <p><span t-field="o.field_empresa"/></p>
+                <h2>Datos del cliente</h2>
+                <p><span t-field="o.field_cliente"/></p>
+                <h2>Metodo de pago</h2>
+                <p><span t-field="o.metodo"/></p>
+                <h2>Descripcion del producto</h2>
+                <p><span t-field="o.descriptionproduct"/></p>
+                <h2>Precio</h2>
+                <p>Precio: <span t-field="o.precio"/></p>
+                <p>Iva: <span t-field="o.iva"/></p>
+                <p>Total a pagar: <span t-field="o.preciototal"/></p>
+
+         </div>
+
+         <div class="footer"> 
+         </div>
+      </t>
+    </t>
+   </template>
+
+  </data>
+</odoo>

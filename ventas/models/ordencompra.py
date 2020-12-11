@@ -26,6 +26,8 @@ class ordencompra(models.Model):
     id_detalle_orden_compra = fields.Many2one(
         'ventas.detalle_orden_compra', string="ID orden de compra")
 
+    #CAMBIE ALGO ACA OJITO
+    
 
 
 
