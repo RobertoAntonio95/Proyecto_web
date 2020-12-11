@@ -26,8 +26,7 @@
     'version': '1,1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'ventas', 'inventario'],
-    #
+    'depends': ['base'],
     # always loaded
     'data': [
         'security/ir.model.access.csv',
