@@ -7,7 +7,6 @@
             <field name="model">contabilidad.factura</field>
             <field name="arch" type="xml">
                 <tree>
-
                     <field name="vendedor_id"/>
                     <field name="banco_id"/>
                     <field name="fecha_creación"/>
@@ -15,8 +14,41 @@
                     <field name="base_imponible"/>
                     <field name="impuestos"/>
                     <field name="total"/>
-
                 </tree>
+            </field>
+        </record>
+
+        <record id="contabilidad.factura_form" model="ir.ui.view">
+            <field name="name">factura formulario</field>
+            <field name="model">contabilidad.factura</field>
+            <field name="arch" type="xml">
+                <form string="Factura">
+                    <header>
+                        <!-- To add buttons and status widget -->
+                    </header>
+                    <sheet>
+                        <!-- To add form content -->
+                        <group>
+                            <group>
+                                <field name="vendedor_id"/>
+                                <field name="banco_id"/>
+                                <field name="fecha_creación"/>
+                                <field name="fecha_vencimiento"/>
+                            </group>
+                            <group>
+                                <field name="base_imponible"/>
+                                <field name="impuestos"/>
+                                <field name="total"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <field name="detalle_factura_ids"/>
+                        </group>
+                    </sheet>
+
+
+                </form>
             </field>
         </record>
 
