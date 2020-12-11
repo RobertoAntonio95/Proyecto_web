@@ -3,7 +3,7 @@
 
         <!-- LISTA PRODS -->
         <record model="ir.ui.view" id="inventario.producto_list">
-            <field name="name">Lista de productos</field>
+            <field name="name">Lista de producto</field>
             <field name="model">inventario.producto</field>
             <field name="arch" type="xml">
                 <tree>
