@@ -14,4 +14,5 @@ class detalle_compra(models.Model):
     precio_total = fields.Char(string="Fecha de compra", required=True)
     impuestos = fields.Char(string="Fecha de compra", required=True)
    # id_producto = fields.Many2one()
-    
+
+  
