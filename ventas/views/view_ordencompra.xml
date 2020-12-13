@@ -44,7 +44,7 @@
         <menuitem name="Ventas" id="ventas.menu_root"/>
 
       <!--    Creo el menu Cliente  -->
-        <menuitem name="Orden compra" id="ventas.menu_ordencompra" parent="ventas.menu_root" 
+        <menuitem name="Registros de compras" id="ventas.menu_ordencompra" parent="ventas.menu_root" 
             action="ventas.ordencompra_action_window"/> 
     </data>
 </odoo>
