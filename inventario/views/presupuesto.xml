@@ -7,8 +7,8 @@
             <field name="model">inventario.producto</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="fecha"/>
-                    <field name="fecha_limite"/>
+                    <field name="fecha"/>    
+                    <field name="fecha_limite"/>   <!-- Comprobar tipo de dato en la declaracion -->
                     <field name="total"/>
                     <field name="estado_solicitud"/>
                     <field name="impuesto"/>
