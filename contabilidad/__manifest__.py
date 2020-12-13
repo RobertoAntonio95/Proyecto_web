@@ -5,11 +5,7 @@
     'summary': """
         El modulo de contabilidad esta diseñado exclusivamente para la simplicación de
         procesos financieros tales como balances y la facturación del negocio. La automatización
-        de este modulo permitirá una facturación rápida y ágil creando cierres
-        contables en plazos determinados de tiempo. Por último, este módulo permite de
-        forma rápida y sencilla enviar las facturas correspondiente a los clientes vía correo
-        electrónico al momento de que estos paguen, además de almacenarlas en la base de
-        datos para futuros análisis.""",
+        de este modulo permitirá una facturación rápida.""",
 
     'description': """
         Modulo encargado de la contabilidad del negocio.
