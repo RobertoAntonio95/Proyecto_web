@@ -5,7 +5,7 @@ class inventario(models.Model):
 
     _name = 'inventario.presupuesto'
     _description = 'presupuestos'
-    _rec_name = 'fecha_creación'
+    _rec_name = 'fecha'
 
 # ACÁ LAS FK QUE UTILIZAREMOS DESDE LAS OTRAS TABLAS
 

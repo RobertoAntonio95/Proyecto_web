@@ -5,7 +5,7 @@ class Detalle_presupuesto(models.Model):
 
     _name = 'inventario.detalle_presupuesto'
     _description = 'detalle de presupuestos'
-    _rec_name = 'fecha_creación'
+    _rec_name = 'fecha'
 
 # ACÁ LAS FK QUE UTILIZAREMOS DESDE LAS OTRAS TABLAS
 
