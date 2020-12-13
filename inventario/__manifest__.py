@@ -4,13 +4,7 @@
 
     'summary': """
         Inventario permite llevar fácilmente un preciso control de las
-        entradas y salidas de mercadería durante el proceso de compra por parte del cliente,
-        así como también, manejar adecuadamente los niveles de inventario y entregar toda
-        la información para la administración de éstos. En esta ocasión, es gran importancia
-        para "Fachy Comercial" tener la información acerca de la cantidad de inventario
-        disponible en la bodegas, pero más aún, es vital para la supervivencia del negocio
-        tener herramientas que ayuden a evitar o inhibir la pérdida, extravío o merma de
-        los productos en inventario.""",
+        entradas y salidas de mercadería durante el proceso de compra.""",
 
     'description': """
         Modulo encargado del manejo de mercadería del negocio
@@ -43,5 +37,5 @@
     'demo': [
         'demo/demo.xml',
     ],
-    'application': True
+    'application': True,
 }
