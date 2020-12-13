@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
-
+access_ventas_detalle_compra,ventas.detalle_compra,model_ventas_detalle_compra,,1,1,1,1
 access_ventas_cliente,ventas.cliente,model_ventas_cliente,,1,1,1,1
 access_ventas_ordencompra,ventas.ordencompra,model_ventas_ordencompra,,1,1,1,1

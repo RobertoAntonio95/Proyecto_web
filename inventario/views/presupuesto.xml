@@ -7,9 +7,6 @@
             <field name="model">inventario.producto</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="vendedor"/>
-                    <field name="cliente"/>
-                    <field name="detalle_presupuesto"/>
                     <field name="fecha"/>
                     <field name="fecha_limite"/>
                     <field name="total"/>

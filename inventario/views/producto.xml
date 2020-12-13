@@ -21,7 +21,7 @@
         <!-- ACCION CLICK QUE MUESTRA MENU -->
         <record model="ir.actions.act_window" id="inventario.producto_action_window">
             <field name="name">Listado de productos</field>
-            <field name="res_model">inventario.productos</field>
+            <field name="res_model">inventario.producto</field>
             <field name="view_mode">tree,form</field>
         </record>
 

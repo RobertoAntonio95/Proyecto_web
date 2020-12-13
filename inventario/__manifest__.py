@@ -34,8 +34,9 @@
         'views/detalle_presupuesto.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
-    'application': True,
+   # 'demo': [
+   #     'demo/demo.xml',
+    #],
+    
+    
 }

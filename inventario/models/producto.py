@@ -12,7 +12,7 @@ class Producto(models.Model):
     stock_critico = fields.Integer(string="stock_critico")
     impuesto = fields.Integer(string="impuesto")    # PENSANDO QUE NO FUERA UN VALOR ENTERO
     precio_unitario = fields.Integer(string="precio_unitario")
-    preciofinal = fields.Integer(string="preciofinal")
+    precio_final = fields.Integer(string="preciofinal")
 
     #FK ID DEL PROVEEDOR
 
