@@ -30,6 +30,7 @@
         'security/ir.model.access.csv',
         'views/view_cliente.xml',
         'views/view_ordencompra.xml',
+        'views/view_detalle_orden_compra.xml',
     ],
     'application': True
 }
