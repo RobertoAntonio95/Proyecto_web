@@ -14,6 +14,7 @@
                     <field name="base_imponible"/>
                     <field name="impuestos"/>
                     <field name="total"/>
+                    <field name="cliente"/>
                 </tree>
             </field>
         </record>
@@ -38,6 +39,7 @@
                                 <field name="base_imponible"/>
                                 <field name="impuestos"/>
                                 <field name="total"/>
+                                <field name="cliente"/>
                             </group>
                         </group>
                         <group>

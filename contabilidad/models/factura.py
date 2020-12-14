@@ -26,6 +26,8 @@ class Factura(models.Model):
     notas = fields.Text(
         string='notas', default="agregue alguna nota aqui con respecto a esta factura")
 
+    cliente = fields.Many2one('ventas.cliente', string='cliente')
+
     @api.one
     def _impuestos(self):
         self.impuestos = (self.base_imponible * 0.19)

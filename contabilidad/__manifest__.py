@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "contabilidad",
+    'name': "Facturas",
 
     'summary': """
         El modulo de contabilidad esta diseñado exclusivamente para la simplicación de
-        procesos financieros tales como balances y la facturación del negocio. La automatización
-        de este modulo permitirá una facturación rápida.""",
+        procesos financieros tales como verificar la facturación del negocio.""",
 
     'description': """
         Modulo encargado de la contabilidad del negocio.
@@ -19,7 +18,7 @@
     # for the full list
 
     'category': 'Contabilidad',
-    'version': '1,1',
+    'version': '1,2',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
