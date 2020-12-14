@@ -8,5 +8,5 @@ class Categoria(models.Model):
     _rec_name = 'nombre'
 
     nombre = fields.Char(string="Nombre", required=True)
-    descripcion = fields.Char(string="Descripcion", required=True)
+    descripcion = fields.Char(string="Descripción", required=True)
     

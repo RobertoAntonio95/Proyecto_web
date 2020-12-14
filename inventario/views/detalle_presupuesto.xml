@@ -41,7 +41,7 @@
         <menuitem name="inventario" id="inventario.menu_root"/>
 
         <!-- MENU DETALLE PRESUPUESTO -->
-        <menuitem name="detalle_presupuesto" id="inventario.menu_detalle_presupuesto" parent="inventario.menu_root" action="inventario.detalle_presupuesto_action_window"/>
+        <menuitem name="Detalle Presupuesto" id="inventario.menu_detalle_presupuesto" parent="inventario.menu_root" action="inventario.detalle_presupuesto_action_window"/>
 
     </data>
 </odoo>

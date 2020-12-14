@@ -43,8 +43,8 @@
         <!-- RAIZ INVENTARIO -->
         <menuitem name="Inventario" id="inventario.menu_root"/>
 
-        <!-- MENU PRODUCTO -->
-        <menuitem name="producto" id="inventario.menu_producto" parent="inventario.menu_root" action="inventario.producto_action_window"/>
+        <!-- TOP BAR MENU PRODUCTO -->
+        <menuitem name="Productos" id="inventario.menu_producto" parent="inventario.menu_root" action="inventario.producto_action_window"/>
 
     </data>
 </odoo>

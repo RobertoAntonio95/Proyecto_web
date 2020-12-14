@@ -13,9 +13,9 @@ class detalle_presupuesto(models.Model):
    #     'inventario.producto', string='producto')
 
 
-    cantidad = fields.Integer(string="cantidad", required=True)
+    cantidad = fields.Integer(string="Cantidad", required=True)
     precio_unitario = fields.Integer(string="precio_unitario", required=True)
-    impuesto = fields.Integer(string="impuesto", required=True)
-    total = fields.Integer(string="total", required=True)
-    descripcion = fields.Char(string="descripcion", required=True)
+    impuesto = fields.Integer(string="Impuesto", required=True)
+    total = fields.Integer(string="Total", required=True)
+    descripcion = fields.Char(string="Descripción", required=True)
   
