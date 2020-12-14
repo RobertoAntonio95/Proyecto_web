@@ -33,10 +33,11 @@
         'views/presupuesto.xml',
         'views/detalle_presupuesto.xml',
     ],
-    # only loaded in demonstration mode
-   # 'demo': [
-   #     'demo/demo.xml',
-    #],
+   
+     'demo': [
+     'demo/demo.xml',
+      ],
+    'application': True,
     
     
 }

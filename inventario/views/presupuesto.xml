@@ -4,7 +4,7 @@
         <!-- LISTA PRODS -->
         <record model="ir.ui.view" id="inventario.producto_list">
             <field name="name">Lista de productos</field>
-            <field name="model">inventario.producto</field>
+            <field name="model">inventario.presupuesto</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="fecha"/>    
