@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import  cliente, ordencompra, detalle_orden_compra
+from . import  cliente, ordencompra, detalle_orden_compra, producto
