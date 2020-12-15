@@ -13,4 +13,4 @@ class Proveedor(models.Model):
     direccion = fields.Char(string="Dirección", required=True)
     
 
-    #CARGO
+    #RECORDAR CARGO
