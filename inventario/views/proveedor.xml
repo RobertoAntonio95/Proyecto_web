@@ -23,20 +23,8 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <!-- ACCION SERVER -->
-        <record model="ir.actions.server" id="inventario.proveedor_action_server">
-            <field name="name">proveedor server</field>
-            <field name="model_id" ref="model_inventario_proveedor"/>
-            <field name="state">code</field>
-            <field name="code">
-
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-            </field>
-        </record>
+        
+        
 
         <!-- RAIZ INVENTARIO -->
         <menuitem name="Inventario" id="inventario.menu_root"/>

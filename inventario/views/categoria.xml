@@ -20,20 +20,6 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <!-- ACCION SERVER -->
-        <record model="ir.actions.server" id="inventario.categoria_action_server">
-            <field name="name">categoria server</field>
-            <field name="model_id" ref="model_inventario_categoria"/>
-            <field name="state">code</field>
-            <field name="code">
-
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-            </field>
-        </record>
 
         <!-- RAIZ INVENTARIO -->
         <menuitem name="inventario" id="inventario.menu_root"/>
