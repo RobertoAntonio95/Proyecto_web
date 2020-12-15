@@ -6,7 +6,7 @@
             <field name="model">ventas.detalle_compra</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="id_producto"/>
+                    <field name="id_detalle_orden_compra"/>
                     <field name="cantidad"/>
                     <field name="precio_costo"/>
                     <field name="precio_total"/>
@@ -36,8 +36,8 @@
                 </div>
                 <group name="group_top">
                 <group name="group_left">
-                    <field name="cantidad" />
-                    <field name="precio_costo" />             
+                    <field name="id_vendedor" />
+                    <field name="cantidad" />             
                 </group>
                 <group name="group_rigth">
                     <field name="precio_total" />
