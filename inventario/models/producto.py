@@ -4,13 +4,13 @@ class Producto(models.Model):
 
     _name = 'inventario.producto'
     _description = 'productos'
-    _rec_name = 'nombre'
+    
 
     nombre = fields.Char(string="Nombre", required=True)
-    descripcion = fields.Char(string="Descripción", required=True)
+    marca = fields.Char(string="Marca", required=True)
     stock = fields.Integer(string="Stock")
     stock_critico = fields.Integer(string="Stock Crítico")
-    impuesto = fields.Integer(string="Impuesto")    # PENSANDO QUE NO FUERA UN VALOR ENTERO
+    impuesto = fields.Boolean(string="IVA")    
     precio_unitario = fields.Integer(string="Precio Unitario")
     precio_final = fields.Integer(string="Precio Final")
 

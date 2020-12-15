@@ -9,19 +9,15 @@ class Presupuesto(models.Model):
 
 # ACÁ LAS FK QUE UTILIZAREMOS DESDE LAS OTRAS TABLAS
 
-   # vendedor_id = fields.Many2one(
-   #     'contabilidad.vendedor', string='vendedor')
+    vendedor_id = fields.Many2one('contabilidad.vendedor', string='ID Vendedor')
 
-   # cliente_id = fields.Many2one(     #PRUEBA DE LINEA DE CODIGO
-   #     'ventas.cliente', string = 'cliente')
+    cliente_id = fields.Many2one('ventas.cliente', string = 'ID Cliente')
 
-   # detalle_presupuesto_id = fields.Many2one(   #FALTA CREAR DETALLE PRESP.     
-   # )
+    detalle_presupuesto_id = fields.Many2one('inventario.detalle_presupuesto', string = "ID Detalle Presupuesto")
 
-    fecha = fields.Date(string="Fecha")
-    fecha_limite = fields.Date(string="fecha_limite", required=True)
-    total = fields.Integer(string="Total", required=True)
-    estado_solicitud = fields.Boolean(string="Estado_solicitud", required=True) #DUDA MAYUSCULA
-    impuesto = fields.Float(string="Impuesto", required=True)    # PENSANDO QUE NO FUERA UN VALOR ENTERO
+    fecha_creacion = fields.Date(string="Fecha Creación")
+    fecha_expiracion = fields.Date(string="Fecha Expiración", required=True)
+    estado_solicitud = fields.Boolean(string="Estado Solicitud", required=True) 
+    impuesto = fields.Boolean(string="IVA", required=True)    
     total = fields.Integer(string="Total", required=True)
     correo = fields.Char(string="Correo electrónico", required=True)

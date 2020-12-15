@@ -7,13 +7,16 @@
             <field name="model">inventario.presupuesto</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="fecha"/>    
-                    <field name="fecha_limite"/>   <!-- Comprobar tipo de dato en la declaracion -->
+                    <field name="cliente_id"/> 
+                    <field name="vendedor_id"/>
+                    <field name="fecha_creacion"/>    
+                    <field name="fecha_expiracion"/>  
+                    <field name="detalle_presupuesto_id"/>
+                    <field name="fecha_creacion"/>
+                    <field name="fecha_expiracion"/>
                     <field name="total"/>
                     <field name="estado_solicitud"/>
-                    <field name="impuesto"/>
-                    <field name="total"/>
-                    <field name="correo"/>
+                    
                 </tree>
             </field>
         </record>
