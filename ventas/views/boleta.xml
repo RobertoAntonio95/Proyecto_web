@@ -1,44 +1,122 @@
+<?xml version="1.0"?>
 <odoo>
-  <data>
-   <report id="boleta"
-   string="Imprimir Factura"
-   model="ventas.ordencompra"
-   report_type="qweb-pdf"
-   name="ventas.report_ventas_template"
-   />
+    <!-- id, nombre, modelo que se imprime, tipo de reporte, template -->
+    <report id="action_factura_report" string="boletas" model="ventas.ordencompra" report_type="qweb-pdf" name="ventas.ordencompra_report_template" />
 
-   <template id="report_ventas_template">
-    <t t-call="web.html_container">
+    <template id="ordencompra_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="header">
 
-      <t t-foreach="docs" t-as="o">
-         <div class="header"> 
-         </div>
+                    </div>
+                    <div class="page">
+                        <h1>FACHY Comercial S.A</h1>
 
-         <div class="page"> 
-         
-                <h1>Boleta y/o Factura</h1> 
-                <h2>Fecha de emisión</h2>
-                <p><span t-field="o.fecha"/></p>
-                <h2>Fecha limite a pagar</h2>
-                <p><span t-field="o.fecha_limite"/></p>
-                <h2>Datos del cliente</h2>
-                <p><span t-field="o.cliente"/></p>
-                <h2>Total a pagar</h2>
-                <p><span t-field="o.total"/></p>
-                <h2>Impuesto del producto</h2>
-                <p><span t-field="o.impuesto"/></p>
-                <h2>Validez</h2>
-                <p>Precio: <span t-field="o.validez"/></p>
-                <p>Iva: <span t-field="o.id_detalle_orden_compra"/></p>
-               
 
-         </div>
+                        <!-- tabla para datos del cliente y vendedor -->
+                        <table class="table table-borderless table-sm">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Datos vendedor</th>
+                                    <th scope="col">Datos cliente</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.fecha" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.fecha_limite" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <t t-foreach="request.env['ventas.cliente'].search([])" t-as="obj">
+                                            <t t-esc="obj.rut"/>
+                                        </t>
+                                    </td>
+                                    <td>
+                                        <p>aqui va a ir el rut del cliente</p>
+                                        <!--  <t t-foreach="request.env['contabilidad.cliente'].search([])" t-as="obj">
+                                            <t t-esc="obj.rut"/>
+                                        </t> -->
 
-         <div class="footer"> 
-         </div>
-      </t>
-    </t>
-   </template>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-  </data>
-</odoo>
+                        <!-- detalle de la factura -->
+                        <table class="table table-borderless table-sm">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Datos factura</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>fecha creación</p>
+                                    </td>
+                                    <td>
+                                        <p>fecha vencimiento</p>
+                                    </td>
+                                    <td>
+                                        <p>banco</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.fecha" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.fecha_limite" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.validez" />
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- detalle de dinero -->
+                       <!--  <table class="table table-borderless table-sm">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">total sin impuestos</th>
+                                    <th scope="col">Datos impuestos</th>
+                                    <th scope="col">total </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.base_imponible" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.impuestos" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.total" />
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+ -->
+                    </div>
+                    <div class="footer">
+                        <small>
+                            Todos los derechos reservados, modulo por roberto, no se que más escribir.
+                        </small>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo> 
