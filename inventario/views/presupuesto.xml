@@ -4,14 +4,11 @@
         <!-- LISTA PRODS -->
         <record model="ir.ui.view" id="inventario.producto_list">
             <field name="name">Lista de productos</field>
-            <field name="model">inventario.producto</field>
+            <field name="model">inventario.presupuesto</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="vendedor"/>
-                    <field name="cliente"/>
-                    <field name="detalle_presupuesto"/>
-                    <field name="fecha"/>
-                    <field name="fecha_limite"/>
+                    <field name="fecha"/>    
+                    <field name="fecha_limite"/>   <!-- Comprobar tipo de dato en la declaracion -->
                     <field name="total"/>
                     <field name="estado_solicitud"/>
                     <field name="impuesto"/>
@@ -47,7 +44,7 @@
         <menuitem name="inventario" id="inventario.menu_root"/>
 
         <!-- MENU PRESUPUESTO -->
-        <menuitem name="presupuesto" id="inventario.menu_presupuesto" parent="inventario.menu_root" action="inventario.presupuesto_action_window"/>
+        <menuitem name="Presupuesto" id="inventario.menu_presupuesto" parent="inventario.menu_root" action="inventario.presupuesto_action_window"/>
 
     </data>
 </odoo>

@@ -1,11 +1,11 @@
 from odoo import models, fields, api
 
 
-class inventario(models.Model):
+class Presupuesto(models.Model):
 
     _name = 'inventario.presupuesto'
     _description = 'presupuestos'
-    _rec_name = 'fecha'
+
 
 # ACÁ LAS FK QUE UTILIZAREMOS DESDE LAS OTRAS TABLAS
 
@@ -18,10 +18,10 @@ class inventario(models.Model):
    # detalle_presupuesto_id = fields.Many2one(   #FALTA CREAR DETALLE PRESP.     
    # )
 
-    fecha = fields.Char(string="fecha", required=True)
+    fecha = fields.Date(string="Fecha")
     fecha_limite = fields.Date(string="fecha_limite", required=True)
-    total = fields.Integer(string="total", required=True)
-    estado_solicitud = fields.Boolean(string="estado_solicitud", required=True) #DUDA MAYUSCULA
-    impuesto = fields.Float(string="impuesto", required=True)    # PENSANDO QUE NO FUERA UN VALOR ENTERO
-    total = fields.Integer(string="total", required=True)
-    correo = fields.Char(string="correo", required=True)
+    total = fields.Integer(string="Total", required=True)
+    estado_solicitud = fields.Boolean(string="Estado_solicitud", required=True) #DUDA MAYUSCULA
+    impuesto = fields.Float(string="Impuesto", required=True)    # PENSANDO QUE NO FUERA UN VALOR ENTERO
+    total = fields.Integer(string="Total", required=True)
+    correo = fields.Char(string="Correo electrónico", required=True)

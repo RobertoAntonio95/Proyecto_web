@@ -11,20 +11,16 @@
 
                     </div>
                     <div class="page">
-
                         <h1>FACHY Comercial S.A</h1>
 
-                        <p>
-                            <span t-field="o.vendedor_id"/>
-                        </p>
 
+                        <!-- tabla para datos del cliente y vendedor -->
                         <table class="table table-borderless table-sm">
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col">vendedor</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">Datos vendedor</th>
+                                    <th scope="col">Datos cliente</th>
                                 </tr>
-
                             </thead>
                             <tbody>
                                 <tr>
@@ -32,23 +28,95 @@
                                         <span t-field="o.vendedor_id" />
                                     </td>
                                     <td>
+                                        <span t-field="o.cliente" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
                                         <t t-foreach="request.env['contabilidad.vendedor'].search([])" t-as="obj">
                                             <t t-esc="obj.rut"/>
                                         </t>
                                     </td>
+                                    <td>
+                                        <p>aqui va a ir el rut del cliente</p>
+                                        <!--  <t t-foreach="request.env['contabilidad.cliente'].search([])" t-as="obj">
+                                            <t t-esc="obj.rut"/>
+                                        </t> -->
 
+                                    </td>
                                 </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- detalle de la factura -->
+                        <table class="table table-borderless table-sm">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Datos factura</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>fecha creación</p>
+                                    </td>
+                                    <td>
+                                        <p>fecha vencimiento</p>
+                                    </td>
+                                    <td>
+                                        <p>banco</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.fecha_creación" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.fecha_vencimiento" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.banco_id" />
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- detalle de dinero -->
+                        <table class="table table-borderless table-sm">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">total sin impuestos</th>
+                                    <th scope="col">Datos impuestos</th>
+                                    <th scope="col">total </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.base_imponible" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.impuestos" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.total" />
+                                    </td>
+                                </tr>
+
                             </tbody>
                         </table>
 
                     </div>
                     <div class="footer">
                         <small>
-                    Todos los derechos reservados, modulo por roberto, no se que más escribir.
+                            Todos los derechos reservados, modulo por roberto, no se que más escribir.
                         </small>
                     </div>
                 </t>
             </t>
         </t>
     </template>
-</odoo>
+</odoo> 

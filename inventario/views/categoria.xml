@@ -39,7 +39,7 @@
         <menuitem name="inventario" id="inventario.menu_root"/>
 
         <!-- MENU CATEGORIA -->
-        <menuitem name="categoria" id="inventario.menu_categoria" parent="inventario.menu_root" action="inventario.categoria_action_window"/>
+        <menuitem name="Categorias" id="inventario.menu_categoria" parent="inventario.menu_root" action="inventario.categoria_action_window"/>
 
     </data>
 </odoo>

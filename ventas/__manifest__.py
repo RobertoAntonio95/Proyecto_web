@@ -4,10 +4,7 @@
 
     'summary': """
         Este módulo estará encargado de las ventas del sistema, el cual presentara al cliente
-        interno o responsable los productos a vender con una imagen respectiva y actualizada
-        de dicho producto, estos tendrán una categoría en específico la cual permitirá al
-        usuario un acceso más expedito y ágil, por ultimo si el producto del cliente no esta
-        en stock, se mostrarán variantes del producto.""",
+        interno o responsable los productos a vender.""",
 
     'description': """
         Modulo encargado de las ventas a clientes mayoristas del negocio
