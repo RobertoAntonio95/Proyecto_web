@@ -5,6 +5,7 @@ class Presupuesto(models.Model):
 
     _name = 'inventario.presupuesto'
     _description = 'presupuestos'
+    _rec_name = 'vendedor_id'
 
 
 # ACÁ LAS FK QUE UTILIZAREMOS DESDE LAS OTRAS TABLAS
@@ -15,7 +16,7 @@ class Presupuesto(models.Model):
 
     detalle_presupuesto_id = fields.Many2one('inventario.detalle_presupuesto', string = "ID Detalle Presupuesto")
 
-    fecha_creacion = fields.Date(string="Fecha Creación")
+    fecha_creacion = fields.Date(string="Fecha Creación", required=True)
     fecha_expiracion = fields.Date(string="Fecha Expiración", required=True)
     estado_solicitud = fields.Boolean(string="Estado Solicitud", required=True) 
     impuesto = fields.Boolean(string="IVA", required=True)    

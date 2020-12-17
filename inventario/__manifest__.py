@@ -28,10 +28,13 @@
         'views/views.xml',
         'views/templates.xml',
         'views/categoria.xml',
-        'views/proveedor.xml',
-        'views/producto.xml',
-        'views/presupuesto.xml',
         'views/detalle_presupuesto.xml',
+        'views/presupuesto.xml',
+        'views/producto.xml',
+        'views/proveedor.xml',
+        
+        
+        
     ],
    
      'demo': [

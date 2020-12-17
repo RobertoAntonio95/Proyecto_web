@@ -9,11 +9,11 @@ class Producto(models.Model):
 
     nombre = fields.Char(string="Nombre", required=True)
     marca = fields.Char(string="Marca", required=True)
-    stock = fields.Integer(string="Stock")
-    stock_critico = fields.Integer(string="Stock Crítico")
-    impuesto = fields.Boolean(string="IVA")
-    precio_unitario = fields.Integer(string="Precio Unitario")
-    precio_final = fields.Integer(string="Precio Final")
+    stock = fields.Integer(string="Stock", required=True)
+    stock_critico = fields.Integer(string="Stock Crítico", required=True)
+    impuesto = fields.Boolean(string="IVA", required=True)
+    precio_unitario = fields.Integer(string="Precio Unitario", required=True)
+    precio_final = fields.Integer(string="Precio Final", required=True)
 
     # FK ID DEL PROVEEDOR
 

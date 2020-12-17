@@ -2,20 +2,21 @@
     <data>
 
         <!-- LISTA PRODS -->
-        <record model="ir.ui.view" id="inventario.producto_list">
-            <field name="name">Lista de productos</field>
+        <record model="ir.ui.view" id="inventario.presupuesto_list">
+            <field name="name">Lista de presupuesto</field>
             <field name="model">inventario.presupuesto</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="cliente_id"/> 
+                   
                     <field name="vendedor_id"/>
-                    <field name="fecha_creacion"/>    
-                    <field name="fecha_expiracion"/>  
+                    <field name="cliente_id"/>
                     <field name="detalle_presupuesto_id"/>
                     <field name="fecha_creacion"/>
                     <field name="fecha_expiracion"/>
-                    <field name="total"/>
                     <field name="estado_solicitud"/>
+                    <field name="impuesto"/>
+                    <field name="total"/>
+                    <field name="correo"/>
                     
                 </tree>
             </field>
@@ -28,26 +29,11 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <!-- ACCION SERVER -->
-        <record model="ir.actions.server" id="inventario.producto_action_server">
-            <field name="name">presupuesto server</field>
-            <field name="model_id" ref="model_inventario_presupuesto"/>
-            <field name="state">code</field>
-            <field name="code">
-
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-            </field>
-        </record>
-
         <!-- RAIZ INVENTARIO -->
-        <menuitem name="inventario" id="inventario.menu_root"/>
+        <menuitem name="Inventario" id="inventario.menu_root"/>
 
-        <!-- MENU PRESUPUESTO -->
-        <menuitem name="Presupuesto" id="inventario.menu_presupuesto" parent="inventario.menu_root" action="inventario.presupuesto_action_window"/>
+        <!-- TOP BAR MENU presupuesto -->
+        <menuitem name="Presupuestos" id="inventario.menu_presupuesto" parent="inventario.menu_root" action="inventario.presupuesto_action_window"/>
 
     </data>
 </odoo>

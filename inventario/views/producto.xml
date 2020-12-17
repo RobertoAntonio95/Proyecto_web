@@ -7,11 +7,12 @@
             <field name="model">inventario.producto</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="proveedor_id"/>
+                   
                     <field name="nombre"/>
                     <field name="marca"/>
                     <field name="stock"/>
                     <field name="stock_critico"/>
+                    <field name="proveedor_id"/>
                     <field name="impuesto"/>
                     <field name="precio_unitario"/>
                     <field name="precio_final"/>

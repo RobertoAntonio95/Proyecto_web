@@ -1,9 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 
-access_inventario_detalle_presupuesto,inventario.detalle_presupuesto,model_inventario_detalle_presupuesto,,1,1,1,1
-access_inventario_categoria,inventario_categoria,model_inventario_categoria,, 1,1,1,1
-access_inventario_presupuesto,inventario_presupuesto,model_inventario_presupuesto,, 1,1,1,1
-access_inventario_producto,inventario_producto,model_inventario_producto,, 1,1,1,1
-access_inventario_proveedor,inventario_proveedor,model_inventario_proveedor,, 1,1,1,1
+access_categoria_inventario,inventario_categoria,model_inventario_categoria,,1,1,1,1
+access_presupuesto_inventario,inventario_presupuesto,model_inventario_presupuesto,,1,1,1,1
+access_proveedor_inventario,inventario_proveedor,model_inventario_proveedor,,1,1,1,1
 
+access_inventario_producto,inventario_producto,model_inventario_producto,,1,1,1,1
+access_inventario_detalle_presupuesto,inventario_detalle_presupuesto,model_inventario_detalle_presupuesto,,1,1,1,1
