@@ -10,3 +10,4 @@ class Categoria(models.Model):
     nombre = fields.Char(string="Nombre", required=True)
     descripcion = fields.Char(string="Descripción", required=True)
     
+    

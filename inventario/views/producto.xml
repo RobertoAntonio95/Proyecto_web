@@ -10,12 +10,13 @@
                    
                     <field name="nombre"/>
                     <field name="marca"/>
+                    <field name="producto_id"/>
                     <field name="stock"/>
                     <field name="stock_critico"/>
                     <field name="proveedor_id"/>
                     <field name="impuesto"/>
-                    <field name="precio_unitario"/>
                     <field name="precio_final"/>
+                    <field name="precio_costo"/>
                     
                 </tree>
             </field>

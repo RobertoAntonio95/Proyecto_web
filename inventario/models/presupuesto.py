@@ -16,7 +16,7 @@ class Presupuesto(models.Model):
 
     detalle_presupuesto_id = fields.Many2one('inventario.detalle_presupuesto', string = "ID Detalle Presupuesto")
 
-    fecha_creacion = fields.Date(string="Fecha Creación", required=True)
+    fecha_creacion = fields.Date(string="Fecha Creación", required=True,  default=fields.date.today())
     fecha_expiracion = fields.Date(string="Fecha Expiración", required=True)
     estado_solicitud = fields.Boolean(string="Estado Solicitud", required=True) 
     impuesto = fields.Boolean(string="IVA", required=True)    
