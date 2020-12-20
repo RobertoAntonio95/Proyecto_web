@@ -29,7 +29,7 @@
         'views/view_ordencompra.xml',
         'views/view_detalle_orden_compra.xml',
         'views/boleta.xml',
-         'views/view_producto.xml',
+        'views/view_producto.xml',
     ],
     'application': True
 }

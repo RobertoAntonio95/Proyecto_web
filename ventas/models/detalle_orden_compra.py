@@ -3,25 +3,30 @@ from odoo import models, fields, api
 class detalle_compra(models.Model):
     _name = 'ventas.detalle_compra'
     _description = 'Detalles de la compra'
+    _rec_name = 'producto_ids'
 
+
+
+    ordencompra_ids = fields.Many2one('ventas.ordencompra', string="Orden compra ID")
+    producto_ids = fields.Many2one('ventas.producto', string="Producto ID")
+    
     id_vendedor = fields.Many2one('contabilidad.vendedor', string='Vendedor encargado')
-    id_detalle_orden_compra = fields.Many2one('ventas.detalle_compra', string='Id detalle de compra')   
-    cantidad = fields.Char(string="Cantidad de Productos", required=True)
+    cantidad = fields.Integer(string="cantidad", required=True, default="1")
 
-    precio_costo = fields.Many2one('ventas.ordencompra',string="Precio", required=True)
+   
 
-  
-    precio_total = fields.Float('Precio Total')
-
+   
     @api.one
-    def _IVA(self):
-        self.IVA = self.precio_total * 0.19
+    def _get_precio(self):
+        self.precio_total = (self.cantidad * self.producto_ids.preciofinal)
+  
+    precio_total = fields.Integer(string="total", compute="_get_precio")
 
-    impuestos = fields.Float('IVA', compute=_IVA)
+    total=fields.Float('TOTAL')
 
     #producto = fields.One2many('ventas.producto', 'apo_id', string="Listado de productos")
    # producto = fields.Many2one('ventas.producto', string="Listado de productos")
-    producto = fields.Many2many('ventas.producto', string = 'Listado de productos')
+    
 
    # id_producto = fields.Many2one()
 

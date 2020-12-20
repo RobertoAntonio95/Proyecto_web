@@ -14,8 +14,8 @@ class Producto(models.Model):
     precio_unitario = fields.Integer(string="precio_unitario")
     preciofinal = fields.Integer(string="preciofinal")
     
-    apo_id = fields.Many2one('ventas.detalle_compra', string='Apo ID') 
-
+    #apo_id = fields.Many2one('ventas.detalle_compra', string='Apo ID') 
+    id_detalle_orden_compra= fields.One2many('ventas.detalle_compra', 'producto_ids', string="Producto")
     #FK ID DEL PROVEEDOR
 
  
