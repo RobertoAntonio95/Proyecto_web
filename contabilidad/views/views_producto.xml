@@ -2,15 +2,15 @@
     <data>
 
         <!-- explicit list view definition -->
-        <record model="ir.ui.view" id="contabilidad.detalle_list">
-            <field name="name">Lista de detalles</field>
-            <field name="model">contabilidad.detalle</field>
+        <record model="ir.ui.view" id="contabilidad.producto_list">
+            <field name="name">Lista de productos</field>
+            <field name="model">contabilidad.producto</field>
             <field name="arch" type="xml">
                 <tree>
 
                     <field name="nombre"/>
-                    <field name="cantidad"/>
-                    <field name="total"/>
+                    <field name="detalle"/>
+                    <field name="precio"/>
 
                 </tree>
             </field>
@@ -18,16 +18,16 @@
 
         <!-- actions opening views on models
         que va a pasar cuando ejecute el menú -->
-        <record model="ir.actions.act_window" id="contabilidad.detalle_action_window">
-            <field name="name">Listado de detalles</field>
-            <field name="res_model">contabilidad.detalle</field>
+        <record model="ir.actions.act_window" id="contabilidad.producto_action_window">
+            <field name="name">Listado de productos</field>
+            <field name="res_model">contabilidad.producto</field>
             <field name="view_mode">tree,form</field>
         </record>
 
         <!-- server action to the one above -->
-        <record model="ir.actions.server" id="contabilidad.detalle_action_server">
-            <field name="name">detalle server</field>
-            <field name="model_id" ref="model_contabilidad_detalle"/>
+        <record model="ir.actions.server" id="contabilidad.producto_action_server">
+            <field name="name">producto server</field>
+            <field name="model_id" ref="model_contabilidad_producto"/>
             <field name="state">code</field>
             <field name="code">
 
@@ -43,8 +43,8 @@
         <!-- Menú raiz contabilidad -->
         <menuitem name="contabilidad" id="contabilidad.menu_root"/>
 
-        <!-- menú item de detalle -->
-        <menuitem name="detalle" id="contabilidad.menu_detalle" parent="contabilidad.menu_root" action="contabilidad.detalle_action_window"/>
+        <!-- menú item de producto -->
+        <menuitem name="producto" id="contabilidad.menu_producto" parent="contabilidad.menu_root" action="contabilidad.producto_action_window"/>
 
     </data>
 </odoo>
