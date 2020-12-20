@@ -21,7 +21,8 @@ class Factura(models.Model):
 
     fecha_creación = fields.Date("Fecha de creación de la factura")
     fecha_vencimiento = fields.Date("Fecha de vecimiento")
-    base_imponible = fields.Monetary(string="base_imponible")
+    base_imponible = fields.Monetary(
+        string="base_imponible")
     impuestos = fields.Monetary(string="impuestos", compute="_impuestos")
     total = fields.Monetary(string="total", compute="_total")
 

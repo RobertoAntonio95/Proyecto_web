@@ -36,14 +36,16 @@
                             </group>
                             <group>
                                 <field name="currency_id"/>
-                                <field name="base_imponible"/>
-                                <field name="impuestos"/>
-                                <field name="total"/>
                                 <field name="cliente"/>
                             </group>
                         </group>
                         <group>
                             <field name="detalle_factura_ids"/>
+                        </group>
+                        <group>
+                            <field name="base_imponible"/>
+                            <field name="impuestos"/>
+                            <field name="total"/>
                         </group>
                         <notebook>
                             <page string="apuntes">
