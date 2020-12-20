@@ -11,6 +11,7 @@ class Proveedor(models.Model):
     telefono = fields.Char(string="Teléfono (Ej: +569AAAABBBB)")
     correo = fields.Char(string="Correo", required=True)
     direccion = fields.Char(string="Dirección", required=True)
+    image = fields.Binary(string="Imagen") #PROBANDO IMAGENES
     
 
     #RECORDAR CARGO ...
