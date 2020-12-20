@@ -24,8 +24,11 @@ class Producto(models.Model):
     
     #producto_id = fields.Char(string="SKU", unique=True) #ACÁ PODRIA SER EL CODIGO DE BARRA O SKU DE CADA PRODUCTO
     
+    id_detalle_orden_compra= fields.One2many('ventas.detalle_compra', 'producto_ids', string="Producto")
+    
     producto_id = fields.One2many(
         'contabilidad.detalle', 'producto_id', string='producto_id')
+
 
 
     _sql_constraints = [   ('producto_unique', 'unique(producto_id)', 'El SKU no puede coincidir con un producto ya existente en inventario'), ]   
