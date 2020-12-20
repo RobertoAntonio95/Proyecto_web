@@ -8,22 +8,22 @@ class ordencompra(models.Model):
     _rec_name = 'cliente'
     #_defaults= {'fecha': lambda *a: time.strftime('%Y-%m-%d'),}
 
-    fecha = fields.Date(string="Fecha Actual")
-    fecha_limite = fields.Selection([ ('15 dias', '15 dias'),
-    ('30 dias', '30 dias'),('10 dias','10 dias')],'Fecha limite', default='10 dias')
 
     cliente = fields.Many2one('ventas.cliente', string="Cliente")
-    
-    total = fields.Many2one(
-        'ventas.detalle_orden_compra', string="Cantidad total")
-    
-    impuesto = fields.Integer(string="IVA", required=True)
-    validez = fields.Boolean(string="Validez de la compra", required=True)
-    
-    id_detalle_orden_compra = fields.Many2one(
-        'ventas.detalle_orden_compra', string="ID orden de compra")
+    fecha = fields.Date(string="Fecha Actual", required=True, default=fields.date.today())
+    fecha_limite = fields.Selection([ ('15 dias', '15 dias'),
+    ('30 dias', '30 dias'),('10 dias','10 dias')],'Fecha limite', default='10 dias', required=True)
 
-    #CAMBIE ALGO ACA OJITO
+    metodo_pago = fields.Selection([ ('Credito', 'Credito'),
+    ('Debito', 'Debito'),('Cheques','Cheques'), ('Efectivo','Efectivo')],'Metodo de pago', default='Efectivo') 
+
+  
+    impuesto = fields.Integer(string="IVA", required=True)
+    validez = fields.Boolean(string="Validez de la compra", required=True) 
+    id_detalle_orden_compra= fields.One2many('ventas.detalle_compra', 'ordencompra_ids', string ="Orden compra")
+    
+
+
     
 
 

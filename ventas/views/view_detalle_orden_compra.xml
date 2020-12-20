@@ -6,11 +6,9 @@
             <field name="model">ventas.detalle_compra</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="id_detalle_orden_compra"/>
+                    <field name="producto_ids"/>  
                     <field name="cantidad"/>
-                    <field name="precio_costo"/>
-                    <field name="precio_total"/>
-                    <field name="impuestos"/>         
+                    <field name="precio_total" sum="total"/>            
                 </tree>
             </field>
  
@@ -36,30 +34,28 @@
                 </div>
                 <group name="group_top">
                 <group name="group_left">
-                    <field name="id_vendedor" />
-                    <field name="cantidad" />             
+                    <field name="id_vendedor" />         
                 </group>
                 <group name="group_rigth">
                     <field name="precio_total" />
-                    <field name="impuestos" />
+                  
                 </group>
                 </group>
 
                 <notebook>
 
-                    <page string="Objetos comprados"> 
-
-                     
+                    <page string="Objetos comprados">     
                      <separator string="Productos" />   
-
-                        
-                        <field name="producto"/>
-                          
-                        
+                        <group name="group_left">
+                             <field name="producto_ids" sum="total"/>
+                             <field name="cantidad" /> 
+                         </group>   
                     </page>
-                    
-               
+ 
                 </notebook>
+
+               
+
             </sheet>
             </form>
              </field>

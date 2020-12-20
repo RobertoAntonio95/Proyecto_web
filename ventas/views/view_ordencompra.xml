@@ -8,14 +8,13 @@
                 <tree>
 
                     <field name="fecha"/>
+                    <field name="metodo_pago"/>
                     <field name="fecha_limite"/>
-                    <field name="total"/>
                     <field name="impuesto"/>
                     <field name="validez"/>
                     <field name="cliente"/>
                     <field name="id_detalle_orden_compra"/>
-               
-                    
+                                 
                 </tree>
             </field>
  
