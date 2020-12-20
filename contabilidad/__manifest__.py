@@ -30,7 +30,6 @@
         'views/views_facturas.xml',
         'views/views_banco.xml',
         'views/views_detalle.xml',
-        'views/views_producto.xml',
         'reports/factura_report.xml',
 
 

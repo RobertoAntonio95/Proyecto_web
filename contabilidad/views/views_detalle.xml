@@ -7,11 +7,8 @@
             <field name="model">contabilidad.detalle</field>
             <field name="arch" type="xml">
                 <tree>
-
-                    <field name="nombre"/>
                     <field name="cantidad"/>
                     <field name="total"/>
-
                 </tree>
             </field>
         </record>
