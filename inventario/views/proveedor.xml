@@ -18,7 +18,7 @@
 
 
         
-        <!-- KANBAN proveedorS -->
+        <!-- KANBAN PROVEEDORES -->
 
         <record id="proveedor_kanban" model="ir.ui.view">
             <field name="name">inventario.proveedor.kanban</field>
