@@ -32,6 +32,7 @@
         'views/views_detalle.xml',
         'reports/factura_report.xml',
 
+
     ],
     # only loaded in demonstration mode
     'demo': [

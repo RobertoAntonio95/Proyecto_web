@@ -1,13 +1,14 @@
 <odoo>
     <data>
 
-        <!-- LISTA PRODS -->
+
+        <!-- FORMULARIO PRODUCTOS -->
         <record model="ir.ui.view" id="inventario.producto_list">
             <field name="name">Lista de producto</field>
             <field name="model">inventario.producto</field>
+            <field name="view_mode">tree,form,kanban</field>
             <field name="arch" type="xml">
-                <tree>
-                   
+                <tree>              
                     <field name="nombre"/>
                     <field name="marca"/>
                     <field name="producto_id"/>
@@ -15,18 +16,60 @@
                     <field name="stock_critico"/>
                     <field name="proveedor_id"/>
                     <field name="impuesto"/>
-                    <field name="precio_final"/>
+                    <field name="precio_venta"/>
                     <field name="precio_costo"/>
-                    
                 </tree>
             </field>
         </record>
+
+        <!-- KANBAN PRODUCTOS -->
+
+        <record id="producto_kanban" model="ir.ui.view">
+            <field name="name">inventario.producto.kanban</field>
+            <field name="model">inventario.producto</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="image"/>
+                    <field name="nombre"/>
+                    
+                    <field name="marca"/>
+                    <field name="producto_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_inventario_producto_kanban">
+                                <t t-if="record.image.raw_value">
+                                    <div class="o_kanban_image_fill_left d-none d-md-block" t-attf-style="background-image:url('#{kanban_image('inventario.producto', 'image', )}')"/>
+                                </t>
+                                <t t-else="">
+                                    <img class="o_kanban_image" alt="Avatar" t-att-src='_s + "/base/static/img/icon.png"'/>
+                                </t>
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="display_name"/>
+                                    </strong>
+                                    <div class="o_kanban_tags_section"/>
+                                    <ul>
+                                        <li>Producto: <field name="nombre"/>
+                                        </li>
+                                        <li>Marca: <field name="marca"/>
+                                        </li>
+                                        <li>Stock: <field name="producto_id"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
 
         <!-- ACCION CLICK QUE MUESTRA MENU -->
         <record model="ir.actions.act_window" id="inventario.producto_action_window">
             <field name="name">Listado de productos</field>
             <field name="res_model">inventario.producto</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
         </record>
 
         <!-- RAIZ INVENTARIO -->

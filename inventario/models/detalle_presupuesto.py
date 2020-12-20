@@ -14,4 +14,4 @@ class Detalle_presupuesto(models.Model):
     descripcion = fields.Char(string="Descripción", required=True)
   
     # ACÁ LAS FK QUE UTILIZAREMOS DESDE LAS OTRAS TABLAS
-    producto_id = fields.Many2one('inventario.producto', string='ID Producto')
+    producto_id = fields.Many2one('inventario.producto', string='SKU')
