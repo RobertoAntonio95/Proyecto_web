@@ -7,7 +7,7 @@ class Proveedor(models.Model):
     _rec_name = 'nombre'
 
     nombre = fields.Char(string="Nombre", required=True)
-    marca_representante = fields.Char(string="Marca Representante", required=True)
+    marca_representante = fields.Char(string="Representante de Marca", required=True)
     telefono = fields.Char(string="Teléfono (Ej: +569AAAABBBB)")
     correo = fields.Char(string="Correo", required=True)
     direccion = fields.Char(string="Dirección", required=True)
