@@ -16,4 +16,4 @@ class Detalle(models.Model):
 
     @api.one
     def _get_precio(self):
-        self.total = (self.cantidad * self.producto_id.precio_final)
+        self.total = (self.cantidad * self.producto_id.precio_venta)
