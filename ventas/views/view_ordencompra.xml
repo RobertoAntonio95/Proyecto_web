@@ -13,7 +13,7 @@
                     <field name="impuesto"/>
                     <field name="validez"/>
                     <field name="cliente"/>
-                    <field name="id_detalle_orden_compra"/>
+                    <field name="id_orden_compra"/>
                                  
                 </tree>
             </field>
@@ -26,19 +26,6 @@
             <field name="res_model">ventas.ordencompra</field>
             <field name="view_mode">tree,form</field>
         </record>
-
-        
-                  <!--   <div class="titulo">
-                    <h1> <field name="name"/> </h1>
-                </div> -->
-
-                <!--   <notebook>
-                        <page string="Productos en la orden">
-                        </page>
-                        <page string="Cualquier wea">
-                        </page>
-                    </notebook> -->
-        
 
         <!-- Creo la raiz (una sola vez) -->
         <menuitem name="Ventas" id="ventas.menu_root"/>

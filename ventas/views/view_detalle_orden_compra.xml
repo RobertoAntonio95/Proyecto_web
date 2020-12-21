@@ -6,7 +6,7 @@
             <field name="model">ventas.detalle_compra</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="producto_ids"/>  
+                    <!-- <field name="producto_ids"/>  -->
                     <field name="cantidad"/>
                     <field name="precio_total" sum="total"/>            
                 </tree>
@@ -47,7 +47,7 @@
                     <page string="Objetos comprados">     
                      <separator string="Productos" />   
                         <group name="group_left">
-                             <field name="producto_ids" sum="total"/>
+                          <field name="producto_ids" sum="total"/> 
                              <field name="cantidad" /> 
                          </group>   
                     </page>
@@ -60,17 +60,6 @@
             </form>
              </field>
         </record>
-        
-                  <!--   <div class="titulo">
-                    <h1> <field name="name"/> </h1>
-                </div> -->
-
-                <!--   <notebook>
-                        <page string="Productos en la orden">
-                        </page>
-                        <page string="Cualquier wea">
-                        </page>
-                    </notebook> -->
         
 
         <!-- Creo la raiz (una sola vez) -->

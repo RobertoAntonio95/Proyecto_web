@@ -1,16 +1,16 @@
 from odoo import models, fields, api
-import time
 
 class ordencompra(models.Model):
     
     _name = 'ventas.ordencompra'
     _description = 'Ordenes de compra'
     _rec_name = 'cliente'
-    #_defaults= {'fecha': lambda *a: time.strftime('%Y-%m-%d'),}
-
+  
 
     cliente = fields.Many2one('ventas.cliente', string="Cliente")
+
     fecha = fields.Date(string="Fecha Actual", required=True, default=fields.date.today())
+
     fecha_limite = fields.Selection([ ('15 dias', '15 dias'),
     ('30 dias', '30 dias'),('10 dias','10 dias')],'Fecha limite', default='10 dias', required=True)
 
@@ -19,8 +19,10 @@ class ordencompra(models.Model):
 
   
     impuesto = fields.Integer(string="IVA", required=True)
+
     validez = fields.Boolean(string="Validez de la compra", required=True) 
-    id_detalle_orden_compra= fields.One2many('ventas.detalle_compra', 'ordencompra_ids', string ="Orden compra")
+    
+    id_orden_compra= fields.One2many('ventas.detalle_compra', 'ordencompra_ids', string ="Orden compra")
     
 
 
