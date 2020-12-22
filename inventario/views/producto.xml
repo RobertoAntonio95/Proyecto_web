@@ -8,10 +8,10 @@
             <field name="model">inventario.producto</field>
             <field name="view_mode">tree,form,kanban</field>
             <field name="arch" type="xml">
-                <tree>              
+                <tree>
                     <field name="nombre"/>
                     <field name="marca"/>
-                    <field name="producto_id"/>
+                    <!--  <field name="producto_id"/> -->
                     <field name="stock"/>
                     <field name="stock_critico"/>
                     <field name="proveedor_id"/>
@@ -31,9 +31,9 @@
                 <kanban>
                     <field name="image"/>
                     <field name="nombre"/>
-                    
+
                     <field name="marca"/>
-                    <field name="producto_id"/>
+                    <!-- <field name="producto_id"/> -->
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_inventario_producto_kanban">
@@ -53,7 +53,7 @@
                                         </li>
                                         <li>Marca: <field name="marca"/>
                                         </li>
-                                        <li>Stock: <field name="producto_id"/>
+                                        <li>Stock: 
                                         </li>
                                     </ul>
                                 </div>
