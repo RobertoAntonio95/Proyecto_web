@@ -13,7 +13,8 @@
                     <field name="telefono"/>
                     <field name="cargo_id"/>
                     <field name="cont_facturas"/>
-
+                    <!--    <field name="facturas_ids" attrs="{'invisible': True}"/>
+ -->
                 </tree>
             </field>
         </record>

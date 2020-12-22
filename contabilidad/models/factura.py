@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from datetime import datetime
 
 
 class Factura(models.Model):
@@ -19,10 +20,13 @@ class Factura(models.Model):
     detalle_factura_ids = fields.One2many(
         'contabilidad.detalle', 'factura_id', string='detalles')
 
-    fecha_creación = fields.Date("Fecha de creación de la factura")
+    fecha_creación = fields.Date(
+        String="Fecha de creación de la factura", default=fields.Date.today())
+
     fecha_vencimiento = fields.Date("Fecha de vecimiento")
-    base_imponible = fields.Monetary(
-        string="base_imponible")
+    base_imponible = fields.Integer(
+        string="base_imponible"  # , compute="_calcularla"
+    )
     impuestos = fields.Monetary(string="impuestos", compute="_impuestos")
     total = fields.Monetary(string="total", compute="_total")
 
@@ -36,3 +40,18 @@ class Factura(models.Model):
     @api.one
     def _total(self):
         self.total = (self.base_imponible + self.impuestos)
+
+    #  @api.one
+    #  def _calcularla(self):
+    #      num = 0
+#
+    #      # esta funciona a medias
+    #      # for total in self.detalle_factura_ids:
+    #      #     num += int(total)
+    #      # self.base_imponible = (self.base_imponible + num)
+#
+    #      # for detalle in self.detalle_factura_ids:
+    #      #     for total in self.detalle_factura_ids.total:
+    #      #         num += 1
+    #      # self.base_imponible = (self.base_imponible + num)
+#

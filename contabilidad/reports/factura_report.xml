@@ -12,6 +12,9 @@
                     </div>
                     <div class="page">
                         <h1>FACHY Comercial S.A</h1>
+                        <br></br>
+                        <br></br>
+                        <br></br>
 
 
                         <!-- tabla para datos del cliente y vendedor -->
@@ -33,21 +36,23 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <t t-foreach="request.env['contabilidad.vendedor'].search([])" t-as="obj">
-                                            <t t-esc="obj.rut"/>
-                                        </t>
-                                    </td>
-                                    <td>
-                                        <p>aqui va a ir el rut del cliente</p>
-                                        <!--  <t t-foreach="request.env['contabilidad.cliente'].search([])" t-as="obj">
+                                        <!--  <t t-foreach="request.env['contabilidad.vendedor'].search([])" t-as="obj">
                                             <t t-esc="obj.rut"/>
                                         </t> -->
+                                        <p>9848786-K</p>
+                                    </td>
+                                    <td>
+                                        <!-- <t t-foreach="request.env['ventas.cliente'].search([])" t-as="obj">
+                                            <t t-esc="obj.rut"/>
+                                        </t> -->
+                                        <p>8759864-6</p>
 
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-
+                        <br></br>
+                        <br></br>
                         <!-- detalle de la factura -->
                         <table class="table table-borderless table-sm">
                             <thead class="thead-dark">
@@ -109,10 +114,23 @@
                             </tbody>
                         </table>
 
+
+
+
+
                     </div>
                     <div class="footer">
                         <small>
-                            Todos los derechos reservados, modulo por roberto, no se que más escribir.
+                            FACHY COMERCIAL S.A 
+                        
+                            <br></br>
+                            Manuel Rodriguez 371 Linares, Chile.
+                            <br></br>
+                            Fono: 73 2589614
+                            <br></br>
+                            Representante legal: Roberto Muñoz Campos.
+                            <br></br>
+                            Todos los derechos reservados, modulo por roberto.
                         </small>
                     </div>
                 </t>
