@@ -5,4 +5,3 @@ access_cargo_contabilidad,contabilidad.cargo,model_contabilidad_cargo,,1,1,1,1
 access_factura_contabilidad,contabilidad.factura,model_contabilidad_factura,,1,1,1,1
 access_banco_contabilidad,contabilidad.banco,model_contabilidad_banco,,1,1,1,1
 access_detalle_contabilidad,contabilidad.detalle,model_contabilidad_detalle,,1,1,1,1
-access_producto_contabilidad,contabilidad.producto,model_contabilidad_producto,,1,1,1,1
