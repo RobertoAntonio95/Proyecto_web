@@ -3,13 +3,13 @@ from odoo import models, fields, api
 class detalle_compra(models.Model):
     _name = 'ventas.detalle_compra'
     _description = 'Detalles de la compra'
-    _rec_name = 'ordencompra_ids'
+    _rec_name = 'ordencompra_id'
 
     
 
-    ordencompra_ids = fields.Many2one('ventas.ordencompra', string="Orden compra ID") 
+    ordencompra_id = fields.Many2one('ventas.ordencompra', string="Orden compra ID") 
 
-    producto_ids = fields.Many2one('inventario.producto', string='Producto ID')
+    producto_id = fields.Many2one('inventario.producto', string='Producto ID')
     
     id_vendedor = fields.Many2one('contabilidad.vendedor', string='Vendedor encargado')
 

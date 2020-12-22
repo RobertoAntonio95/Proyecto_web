@@ -47,7 +47,7 @@
                     <page string="Objetos comprados">     
                      <separator string="Productos" />   
                         <group name="group_left">
-                          <field name="producto_ids" sum="total"/> 
+                          <field name="producto_id" sum="total"/> 
                              <field name="cantidad" /> 
                          </group>   
                     </page>

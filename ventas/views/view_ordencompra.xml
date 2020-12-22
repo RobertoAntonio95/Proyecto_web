@@ -13,7 +13,7 @@
                     <field name="impuesto"/>
                     <field name="validez"/>
                     <field name="cliente"/>
-                    <field name="id_orden_compra"/>
+                   
                                  
                 </tree>
             </field>

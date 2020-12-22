@@ -22,7 +22,7 @@ class ordencompra(models.Model):
 
     validez = fields.Boolean(string="Validez de la compra", required=True) 
     
-    id_orden_compra= fields.One2many('ventas.detalle_compra', 'ordencompra_ids', string ="Orden compra")
+    orden_compra_ids= fields.One2many('ventas.detalle_compra', 'ordencompra_id', string ="Detalle")
     
 
 
