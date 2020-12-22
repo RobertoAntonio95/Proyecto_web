@@ -12,5 +12,4 @@ class cliente(models.Model):
     empresa = fields.Char(string="Empresas", required=True)
     telefono = fields.Char(string="Telefono", required=True)    
 
-    cliente_id = fields.Many2one(
-          'ventas.ordencompra', string='Codigo del cliente')
+ 

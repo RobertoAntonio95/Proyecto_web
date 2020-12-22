@@ -25,7 +25,7 @@
             <field name="view_mode">tree,form</field>
         </record>
         
-        <!-- Creo la accion del servidor -->
+        <!--  Creo la accion del servidor -->
        
 
            <!-- Creo la raiz (una sola vez) -->
