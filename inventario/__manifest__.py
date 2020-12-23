@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','contabilidad'],
+    'depends': ['base'],
 
     # always loaded
     'data': [
@@ -32,15 +32,15 @@
         'views/presupuesto.xml',
         'views/producto.xml',
         'views/proveedor.xml',
-        
-        
-        
+
+
+
     ],
-   
-     'demo': [
-     'demo/demo.xml',
-      ],
+
+    'demo': [
+        'demo/demo.xml',
+    ],
     'application': True,
-    
-    
+
+
 }
