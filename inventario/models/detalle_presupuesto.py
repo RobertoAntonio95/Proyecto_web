@@ -11,7 +11,7 @@ class Detalle_presupuesto(models.Model):
     precio_unitario = fields.Integer(string="Precio Unitario", required=True)
     impuesto = fields.Boolean(string="IVA", required=True)
     total = fields.Integer(string="Total", required=True)
-    descripcion = fields.Char(string="Descripción", required=True)
+    descripcion = fields.Char(string="ID", required=True)
   
     # ACÁ LAS FK QUE UTILIZAREMOS DESDE LAS OTRAS TABLAS
-    producto_id = fields.Many2one('inventario.producto', string='SKU')
+    producto_id = fields.Many2one('inventario.producto', string='Producto')

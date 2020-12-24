@@ -9,7 +9,7 @@
                 <tree>
                    
                     <field name="vendedor_id"/>
-                    <field name="cliente_id"/>
+                    <field name="nombre"/>
                     <field name="detalle_presupuesto_id"/>
                     <field name="fecha_creacion"/>
                     <field name="fecha_expiracion"/>
