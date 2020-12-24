@@ -9,7 +9,7 @@ class cliente(models.Model):
     nombre = fields.Char(string="Nombre", required=True)
     rut = fields.Char(string="RUT", required=True)
     correo = fields.Char(string="Correo", required=True)
-    empresa = fields.Char(string="Empresas", required=True)
+    banco_id = fields.Many2one('contabilidad.banco',string="Banco")
     telefono = fields.Char(string="Telefono", required=True)    
 
  

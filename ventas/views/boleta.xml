@@ -60,59 +60,27 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <p>fecha creación</p>
+                                        <p>Fecha</p>
                                     </td>
                                     <td>
-                                        <p>fecha vencimiento</p>
+                                        <p>Productos </p>
                                     </td>
-                                    <td>
-                                        <p>banco</p>
-                                    </td>
+                                
                                 </tr>
                                 <tr>
                                     <td>
                                         <span t-field="o.fecha" />
                                     </td>
                                     <td>
-                                        <span t-field="o.fecha_limite" />
-                                    </td>
-                                    <td>
-                                        <span t-field="o.validez" />
-
+                                        <span t-field="o.orden_compra_ids" />
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-
-                        <!-- detalle de dinero -->
-                       <!--  <table class="table table-borderless table-sm">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">total sin impuestos</th>
-                                    <th scope="col">Datos impuestos</th>
-                                    <th scope="col">total </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <span t-field="o.base_imponible" />
-                                    </td>
-                                    <td>
-                                        <span t-field="o.impuestos" />
-                                    </td>
-                                    <td>
-                                        <span t-field="o.total" />
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
- -->
                     </div>
                     <div class="footer">
                         <small>
-                            Todos los derechos reservados, modulo por roberto, no se que más escribir.
+                            Todos los derechos reservados, Fachy S.A
                         </small>
                     </div>
                 </t>

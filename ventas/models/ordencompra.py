@@ -17,8 +17,6 @@ class ordencompra(models.Model):
     metodo_pago = fields.Selection([ ('Credito', 'Credito'),
     ('Debito', 'Debito'),('Cheques','Cheques'), ('Efectivo','Efectivo')],'Metodo de pago', default='Efectivo') 
 
-  
-    impuesto = fields.Integer(string="IVA", required=True)
 
     validez = fields.Boolean(string="Validez de la compra", required=True) 
     

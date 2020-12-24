@@ -9,7 +9,7 @@ class detalle_compra(models.Model):
     ordencompra_id = fields.Many2one(
         'ventas.ordencompra', string="Orden compra ID")
 
-    producto_id = fields.Many2one('inventario.producto', string='Producto ID')
+    producto_id = fields.Many2one('inventario.producto', string='Nombre Producto')
 
     id_vendedor = fields.Many2one(
         'contabilidad.vendedor', string='Vendedor encargado')

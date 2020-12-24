@@ -12,7 +12,7 @@
                     <field name="nombre"/>
                     <field name="rut"/>
                     <field name="correo"/>
-                    <field name="empresa"/>
+                    <field name="banco_id"/>
                     <field name="telefono"/>
                 </tree>
             </field>

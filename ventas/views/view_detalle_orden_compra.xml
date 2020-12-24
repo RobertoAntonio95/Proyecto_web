@@ -6,7 +6,7 @@
             <field name="model">ventas.detalle_compra</field>
             <field name="arch" type="xml">
                 <tree>
-                    <!-- <field name="producto_ids"/>  -->
+                    <field name="producto_id"/>  
                     <field name="cantidad"/>
                     <field name="precio_total" sum="total"/>            
                 </tree>
@@ -33,13 +33,9 @@
                 </h1>
                 </div>
                 <group name="group_top">
-                <group name="group_left">
-                    <field name="id_vendedor" />         
-                </group>
-                <group name="group_rigth">
-                    <field name="precio_total" />
-                  
-                </group>
+                    <group name="group_left">
+                        <field name="id_vendedor" />         
+                    </group>
                 </group>
 
                 <notebook>
@@ -63,7 +59,7 @@
         <menuitem name="Ventas" id="ventas.menu_root"/>
 
       <!--    Creo el menu Cliente  -->
-        <menuitem name="Generar Compras" id="ventas.menu_detalle_compra" parent="ventas.menu_root" 
-            action="ventas.detalle_compra_action_window"/> 
+      <!--   <menuitem name="Generar Compras" id="ventas.menu_detalle_compra" parent="ventas.menu_root" 
+            action="ventas.detalle_compra_action_window"/>  -->
     </data>
 </odoo>
