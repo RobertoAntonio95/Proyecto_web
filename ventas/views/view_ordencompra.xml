@@ -10,10 +10,7 @@
                     <field name="fecha"/>
                     <field name="metodo_pago"/>
                     <field name="fecha_limite"/>
-                    <field name="validez"/>
-                    <field name="cliente"/>
-                   
-                                 
+                    <field name="cliente"/>                   
                 </tree>
             </field>
  

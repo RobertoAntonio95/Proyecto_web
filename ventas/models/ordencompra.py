@@ -16,9 +16,6 @@ class ordencompra(models.Model):
 
     metodo_pago = fields.Selection([ ('Credito', 'Credito'),
     ('Debito', 'Debito'),('Cheques','Cheques'), ('Efectivo','Efectivo')],'Metodo de pago', default='Efectivo') 
-
-
-    validez = fields.Boolean(string="Validez de la compra", required=True) 
     
     orden_compra_ids= fields.One2many('ventas.detalle_compra', 'ordencompra_id', string ="Detalle")
     
