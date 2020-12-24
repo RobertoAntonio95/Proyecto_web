@@ -12,7 +12,7 @@ class Presupuesto(models.Model):
 
     vendedor_id = fields.Many2one('contabilidad.vendedor', string='ID Vendedor')
 
-    cliente_id = fields.Many2one('ventas.cliente', string = 'ID Cliente')
+    nombre = fields.Many2one('ventas.cliente', string = 'ID Cliente')
 
     detalle_presupuesto_id = fields.Many2one('inventario.detalle_presupuesto', string = "ID Detalle Presupuesto")
 
