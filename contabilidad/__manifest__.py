@@ -31,7 +31,6 @@
         'views/views_banco.xml',
         'views/views_detalle.xml',
         'reports/factura_report.xml',
-        'views/views_producto.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

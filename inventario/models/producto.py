@@ -22,13 +22,13 @@ class Producto(models.Model):
     proveedor_id = fields.Many2one(
         'inventario.proveedor', string="ID Proveedor")
 
-    producto_id = fields.Char(string="SKU", unique=True) #ACÁ PODRIA SER EL CODIGO DE BARRA O SKU DE CADA PRODUCTO
+    # producto_id = fields.Char(string="SKU", unique=True) #ACÁ PODRIA SER EL CODIGO DE BARRA O SKU DE CADA PRODUCTO
 
-    #detalle_ids = fields.One2many(
+    # detalle_ids = fields.One2many(
     #   'ventas.detalle_compra', 'producto_id', string="Producto")
 
-    # producto_id = fields.One2many(
-    #     'contabilidad.detalle', 'producto_id', string='producto_id')
+    producto_id = fields.One2many(
+        'contabilidad.detalle', 'producto_id', string='producto_id')
 
-    #_sql_constraints = [('producto_unique', 'unique(producto_id)',
+    # _sql_constraints = [('producto_unique', 'unique(producto_id)',
     #                     'El SKU no puede coincidir con un producto ya existente en inventario'), ]

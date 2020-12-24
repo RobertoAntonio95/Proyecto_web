@@ -8,8 +8,10 @@ class Detalle(models.Model):
     _rec_name = 'factura_id'
 
     factura_id = fields.Many2one('contabilidad.factura', string="factura_id")
+
+    # ----------- ID A PRODUCTO -------------
     producto_id = fields.Many2one(
-        'contabilidad.producto', string="producto_id")
+        'inventario.producto', string="producto_id")
 
     nombre = fields.Char(string="Nombre producto",
                          readonly="1", compute="_get_nombre")
