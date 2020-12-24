@@ -25,7 +25,7 @@ class Factura(models.Model):
 
     fecha_vencimiento = fields.Date("Fecha de vecimiento")
     base_imponible = fields.Integer(
-        string="base_imponible"  # , compute="_calcularla"
+        string="base_imponible", compute="_calcularla"
     )
     impuestos = fields.Monetary(string="impuestos", compute="_impuestos")
     total = fields.Monetary(string="total", compute="_total")
@@ -41,8 +41,15 @@ class Factura(models.Model):
     def _total(self):
         self.total = (self.base_imponible + self.impuestos)
 
-    #  @api.one
-    #  def _calcularla(self):
+    @api.one
+    def _calcularla(self):
+        compras = self.env['contabilidad.detalle'].search(
+            [('factura_id', '=', self.id)])
+        total_compra = 0
+        for i in compras:
+            total_compra += i.total
+        self.base_imponible = total_compra
+
     #      num = 0
 #
     #      # esta funciona a medias
