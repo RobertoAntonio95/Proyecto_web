@@ -12,9 +12,9 @@ class Factura(models.Model):
         'contabilidad.vendedor', string='vendedor')
     banco_id = fields.Many2one(
         'contabilidad.banco', string='banco')
-    cliente = fields.Text(string='cliente', default='cliente')
-    # cliente = fields.Many2one(
-    #     'ventas.cliente', string='cliente')
+#    cliente = fields.Text(string='cliente', default='cliente')
+    cliente = fields.Many2one(
+        'ventas.cliente', string='cliente')
     currency_id = fields.Many2one(
         'res.currency', string="moneda")
 

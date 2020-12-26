@@ -41,8 +41,8 @@
         <!-- Menú raiz contabilidad -->
         <menuitem name="contabilidad" id="contabilidad.menu_root"/>
 
-        <!-- menú item de banco -->
+        <!-- menú item de banco
         <menuitem name="banco" id="contabilidad.menu_banco" parent="contabilidad.menu_root" action="contabilidad.banco_action_window"/>
-
+    -->
     </data>
 </odoo>

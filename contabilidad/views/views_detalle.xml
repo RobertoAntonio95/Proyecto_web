@@ -41,11 +41,13 @@
             </field>
         </record>
 
-        <!-- Menú raiz contabilidad -->
+
+
+        <!--  Menú raiz contabilidad  -->
         <menuitem name="contabilidad" id="contabilidad.menu_root"/>
-
-        <!-- menú item de detalle -->
+        <!--  
+        menú item de detalle 
         <menuitem name="detalle" id="contabilidad.menu_detalle" parent="contabilidad.menu_root" action="contabilidad.detalle_action_window"/>
-
+ -->
     </data>
 </odoo>
